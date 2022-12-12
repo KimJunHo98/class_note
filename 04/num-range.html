@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number, range</title>
+    <style>
+        ul { list-style: none; }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>등록정보</legend>
+            <ul>
+                <li>
+                    <label for="member" class="reg">참여인원<small>(최대 10명)</small></label>
+                    <input type="number" id="member" name="member" max="10" min="0" step="1" value="1">
+                </li>
+                <li>
+                    <label for="stuff" class="reg">자원물품<small>(1인당 5개)</small></label>
+                    <input type="number" id="stuff" name="stuff" max="50" min="0" step="5" value="1">
+                </li>
+                <li>
+                    <label for="satis" class="reg">희망단계<small>(하, 중, 상)</small></label>
+                    <input type="range" id="satis" name="satis" max="3" min="1" value="1">
+                </li>
+            </ul>    
+        </fieldset>
+    </form>
+</body>
+</html>

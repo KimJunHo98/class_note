@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>주문서 작성하기</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>상품 주문서</h1>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>개인정보</legend>
+				<ul>
+					<li>
+						<label for="user_name" class="title">이름</label>
+						<input type="text" name="user_name" id="user_name" placeholder="여백 없이 입력" required> 
+					</li>
+					<li>
+						<label for="user_tel1" class="title">연락처</label>
+						<input type="tel" name="user_tel1" id="user_tel1" placeholder="연락 가능한 번호"> 
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>배송지 정보</legend>
+				<ul>
+					<li>
+						<label for="user_addr" class="title">주소</label>
+						<input type="text" name="user_addr" id="user_addr" required maxlength="40">
+					</li>
+					<li>
+						<label for="user_tel2" class="title">전화번호</label>
+						<input type="tel" name="user_tel2" id="user_tel2" required>
+					</li>
+					<li>
+						<label for="memo" class="title">메모</label>
+						<textarea rows="3" cols="40" name="memo" id="memo"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>주문 정보</legend>
+				<ul>
+					<li>
+						<label><input type="checkbox">안티구아</label>
+						<label><input type="number" min="0" max="5" value="0">개</label>
+					</li>
+					<li>
+						<label><input type="checkbox">만델링</label>
+						<label><input type="number" min="0" max="5" value="0">개</label>
+					</li><li>
+						<label><input type="checkbox">블렌딩</label>
+						<label><input type="number" min="0" max="5" value="0">개</label>
+					</li>
+				</ul>
+			</fieldset>
+			<div class="button">
+				<button type="submit">주문하기</button>
+				<button type="reset">다시작성</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

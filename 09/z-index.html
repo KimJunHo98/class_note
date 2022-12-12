@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>z-index 속성</title>
+	<style>
+		#wrap { height: 300px; position: relative; top: 100px; left: 50px; background-color: red; }
+		.box { width: 100px; height: 100px; position: absolute; background-color: yellow; border: 1px solid #000; }
+		#b1 { top: 0; left: 60px; z-index: 1; background-color: aqua; }
+		#b2 { top: 50px; left: 50px; z-index: 2; background-color: blue; }
+		/* z-index: position속성이 적용된 요소에만 사용가능
+			음수,양수 둘 다 사용가능
+			값이 클수록 맨 앞으로 위치하고 값이 작을수록 뒤에 위치
+		*/
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box" id="b1">1</div>
+		<div class="box" id="b2">2</div>
+		<div class="box" id="b3">3</div>
+	</div>
+</body>
+</html>

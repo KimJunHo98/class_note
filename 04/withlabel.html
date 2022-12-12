@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>withlabel</title>
+    <style>
+        ul, ol { list-style: none; }
+        li { margin: 20px; }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h3>수강분야(복수 선택 가능)</h3>
+        <ul>
+            <li>
+                <input type="checkbox" value="grm" id="ch1">
+                <label for="ch1">문법</label>
+            </li>
+            <li>
+                <input type="checkbox" value="wr" id="ch2">
+                <label for="ch2">작문</label>
+            </li>
+            <li>
+                <input type="checkbox" value="rd" id="ch3">
+                <label for="ch3">독해</label>
+            </li>
+        </ul>
+        <!-- value값이 서버에 저장 -->
+        <h3>수강과목(1가지 선택)</h3>
+        <ul>
+            <li><label><input type="radio" name="subject">영어회화</label></li>
+            <li><label><input type="radio" name="subject">중국어회화</label></li>
+            <li><label><input type="radio" name="subject" >일어회화</label></li>
+        </ul>
+    </form>
+    <!-- check: 다중선택 가능, 선택 해제 가능 -->
+    <!-- radio: 다중선택과 선택 해제 불가능 -->
+    <!-- name: 서버에서 사용할 이름 -->
+    <!-- id와 for의 값은 똑같게 입력해야함 -->
+</body>
+</html>

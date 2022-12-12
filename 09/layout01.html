@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout01</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body { background-color: rgb(184, 240, 186); }
+        #wrap { width: 1000px; height: 900px; margin: 0 auto; text-align: center; color: #fff; font-size: 2em; }
+        header {width: 1000px; height: 100px; background-color: rgb(44, 58, 44); }
+        nav { width: 1000px; height: 100px; background-color: rgb(60, 80, 60); }
+        article { width: 700px; height: 600px; background-color: rgb(99, 124, 99); }
+        aside { width: 300px; height: 600px; background-color: rgb(115, 141, 115); }
+        footer { width: 1000px; height: 100px; background-color: rgb(165, 190, 165); }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h2>HEADER</h2>
+        </header>
+        <nav>
+            <h2>NAV</h2>
+        </nav>
+        <section class="clearfix">
+            <article class="fr">
+                <h2>CONTENT</h2>
+            </article>
+            <aside class="fl">
+                <h2>SIDE</h2>
+            </aside>
+        </section>
+        <footer>
+            <h2>FOOTER</h2>
+        </footer>
+    </div>
+</body>
+</html>

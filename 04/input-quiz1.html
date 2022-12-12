@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+    <style>
+        ul { list-style: none; }
+        ul li { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>문제1</h1>
+    <form action="#" method="post">
+        <ul>
+            <li>
+                <input type="text" name="user_id" id="user_id" placeholder="아이디 입력" value="">
+            </li>
+            <li>
+                <textarea name="user_memo" id="user_memo" cols="30" rows="10" placeholder="질문내용입력"></textarea>
+            </li>
+            <li>
+                취미:
+                <label><input type="checkbox" name="hobby1" checked value="낚시">낚시</label>
+                <label><input type="checkbox" name="hobby2" value="독서">독서</label>
+                <label><input type="checkbox" name="hobby3" checked  value="운동">운동</label>
+            </li>
+            <li>
+                특기:
+                <label><input type="radio" name="special" id="special1">댄스</label>
+                <label><input type="radio" name="special" id="special2">노래</label>
+                <label><input type="radio" name="special" id="special3" checked>게임</label>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

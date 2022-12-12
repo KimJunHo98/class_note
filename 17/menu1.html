@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풀다운메뉴</title>
+  <link rel="stylesheet" href="css/nomalize.css">
+  <link rel="stylesheet" href="css/menu1.css">
+</head>
+<body>
+  <div class="layout">
+    <ul class="menus">
+      <li class="menu">
+        <a href="#">다단 풀다운 메뉴</a>
+        <div class="content">
+          <ul>
+            <li><a href="#">메뉴 #1</a></li>
+            <li><a href="#">메뉴 #2</a></li>
+            <li>
+              <input type="checkbox" id="submenu-1">
+              <label for="submenu-1">서브메뉴 펼침 #3</label>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">하위 메뉴 #1</a></li>
+                  <li><a href="#">하위 메뉴 #2</a></li>
+                  <li><a href="#">하위 메뉴 #3</a></li>
+                  <li><a href="#">하위 메뉴 #4</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">메뉴 #4</a></li>
+            <li><a href="#">메뉴 #5</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu"><a href="#" class="menu-2">이미지 메뉴</a>
+        <div class="content">
+          <ul>
+            <li><a href="#">메뉴 #1</a></li>
+            <li><a href="#">메뉴 #2</a></li>
+            <li><a href="#"><img src="./img/cat.jpg" alt=""></a></li>
+            <li><a href="#">메뉴 #3</a></li>
+            <li><a href="#">메뉴 #4</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="menu"><a href="#" class="menu-3">컨텐츠</a>
+        <div class="content">
+          <article>
+            <p>모든 웹사이트에 기본적으로 하나씩은 있는 풀다운 메뉴 구조를 CSS로 만들어 보겠습니다.</p>
+            <p>가로로 길게 펼쳐진 1단 메뉴는 목록 태그("&lt; ul &gt;"")로 간단하게 만들 수 있지만, 2단, 또는 3단으로 펼쳐지는 메뉴를 만들려면 사용자가 메뉴를 펼치는 동작을 통해 메뉴 항목을 최종적으로 선택하는 과정을 필요로 합니다.</p>
+            <p>사용자가 하위 메뉴를 펼치는 과정은 마우스 호버, 또는 클릭을 통해 이루어집니다. 그리고 메뉴를 펼친 상태가 유지되어야 합니다. 그래야 더 하위의 메뉴를 펼칠 수 있습니다.</p>
+            <p><img src="./img/cat2.jpg" alt=""></p>
+          </article>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

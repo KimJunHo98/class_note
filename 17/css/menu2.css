@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+
+ul { list-style: none; }
+a { text-decoration: none; }
+
+.bg1 { background-color: red; }
+.bg2 { background-color: yellow; }
+.bg3 { background-color: green; }
+.bg4 { background-color: pink; }
+
+.pr { position: relative; }
+.pa { position: absolute; }
+
+.width100 { width: 100%; }
+
+.container { max-width: 1400px; width: 100%; margin: 0 auto; }
+
+#nav { text-align: center; }
+#nav > li { display: inline-block; padding: 20px 30px; }
+#nav li .width100 { top: 58px; left: 0; display: none; }
+#nav li:hover .width100 { display: block; }
+
+
+

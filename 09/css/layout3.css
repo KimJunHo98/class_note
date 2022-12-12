@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+#wrap { width: 1200px; margin: 50px auto; display: flex; flex-direction: row; }
+
+/* left */
+.left { width: 800px; height: 400px; box-sizing: border-box; background-color: rgba(0,0,0,.3); align-items: flex-start; }
+.left .leftTop { width: 800px; height: 100px; background-color: rgba(255, 111, 111); margin-bottom: 10px; }
+.left .leftBottom { width: 800px; height: 300px; }
+.left .leftBottom .bottomLeft { width: 600px; height: 300px; }
+
+
+/* right */
+.right { width: 400px; height: 400px; margin-left: 10px; background-color: rgba(0,0,0,.7); }

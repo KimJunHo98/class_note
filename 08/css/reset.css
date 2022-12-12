@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* reset */
+* { margin: 0; padding: 0; }
+body { font-family: "Noto Sans KR", sans-serif, cursive; color: #222; line-height: 1.8; font-size: 16px; }
+ul, ol, dl, dt { list-style: none; }
+a { text-decoration: none; color: #222; }

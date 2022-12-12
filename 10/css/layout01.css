@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "맑은 고딕", 굴림, sans-serif; }
+
+a { text-decoration: none; }
+
+/* layout */
+header { width: 80%; margin: 0 auto; background-color: rgb(36, 36, 92); }
+header ul { list-style: none; text-align: center; }
+header ul li { display: inline-block; margin: 15px; }
+header ul li a { font-size: 1.2em; color: #fff; }
+
+article { width: 80%; margin: 0 auto; padding: 5px; border: 5px solid #333; overflow: hidden; }
+article section { float: left; width: 30%; height: 450px; border: 1px dotted #333; margin: 5px; padding: 5px; }
+article section h3 { background: url("../images/bg-note.png") no-repeat left center; padding-left: 30px; }
+article aside { padding: 10px; background-color: rgb(82, 148, 76); clear: both; }
+
+footer { width: 80%; margin: 0 auto; background-color: #000; text-align: center; padding: 10px; color: #fff; }

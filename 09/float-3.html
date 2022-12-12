@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박스모델</title>
+	<style>
+		div { padding: 20px; margin: 10px; }
+		.box1 { background-color: #ff6d6d; float: left; }
+		.box2 { background-color: #d8ff7c; float: left; }
+		.box3 { background-color: #db81ff; clear: both; }
+		.box4 { background-color: #88ff98; }
+		.parent { padding: 20px; background-color: rgb(0, 225, 255); overflow: hidden; }
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="box1">박스1</div>
+		<div class="box2">박스2</div>
+		<div class="box3">박스3</div>
+	</div>
+	<div class="box4">박스4</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>CSS 선택자</title>  
+  <style>
+    body::after { content: '❤'; position: absolute; }
+    /* img { display: block; } */
+    img:hover { border: 10px solid #000; cursor: pointer; position: relative; }
+  </style>
+</head>
+<body>
+  <p>이미지 위로 마우스 포인터를 올려보세요</p>
+  <img src="images/tangerines.jpg" class="top-img">
+  <a href="#">top</a>
+</body>
+</html>

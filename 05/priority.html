@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>온라인 프로필</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style2.css">
+    <style>
+      /* 스타일시트 우선순위: 1.인라인스타일시트 2. 내부시타일시트 3.외부스타일시트 */
+      /* margin: 요소에 크기가 적용이 되어야 margin값 적용가능 */
+      /* border: border의 색상 지정을 안하면 글자 색을 상속받는다 */
+      /* !important: 선택자에 부여된 속성을 무시하고 최우선적으로 적용시킨다 */
+      /* class선택자보다 id선택자의 우선순위가 높다 */
+      /* id+class를 지정하면 우선순위 높아짐
+        ex) #abc.def {}
+      */
+      * { margin: 20px auto; }
+      body { color: blue; background-color: #ddd; }
+      div { width: 600px; background-color: #fff; padding: 15px; border: 3px dotted; }
+      h2 { color: brown !important; color: red; }
+      #tit { color: skyblue; }
+      #ptag { color: aquamarine; }
+      .title { color: purple; }
+      </style>
+</head>
+<body>
+    <div>      
+      <h2 class="title" style="color: green">이지스퍼블리싱의 미션</h2>
+      <p id="ptag" class="title">사람에게 구체적으로 도움을 주는 책,<br>
+      우리는 열심히 사는 사람들에게 도움이 되고 싶습니다.<br></p>
+      <p id="tit" class="title">우리는 책을 출간하기 전에 질문할 것입니다.</p>
+      <p>"이 책이 사람들에게 도움이 됩니까?"</p>
+    </div>
+    <!-- css는 하나의 태그에 여러 속성을 주면 우선순위가 적용됨
+      1. 작성방식(내부에 작성힐수록 우선순위가 높음)
+      2. 작성 위치가 아래에 있을수록 우선적용됨
+      3. 점수가 높을수록 우선적용됨(태그 1점, 클래스 10점, 아이디 100점)
+    -->
+</body>
+</html>

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+html { overflow-x: hidden; overflow-y: scroll; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Malgun Gothic", "맑은 고딕", "돋움체", Dotum, sans-serif; color: #333; }
+ul { list-style: none; }
+a { text-decoration: none; color: #333; }
+
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { content: ""; display: block; line-height: 0; }
+.clearfix:after { clear: both; }
+
+.fl { float: left; }
+.fr { float: right; }
+.pr { position: relative; }
+.pa { position: absolute; }
+.df { display: flex; }
+.w100 { width: 100%; }
+
+.container { max-width: 1400px; width: 100%; margin: 0 auto; }
+
+ul#nav li .w100 { left: 0; }
+ul#nav li:hover .w100 { display: block; }
+
+/* custom */
+#lnb { height: 94px; background-color: #fff; }
+#lnb li { margin: 0 38px; }
+#lnb li a { display: block; line-height: 94px; text-align: center; font-size: 1.2em; font-weight: bold; }
+#lnb li#freesamLogo { width: 181px; margin-left: 25px; }
+#lnb li a:hover { color: rgb(156, 81, 81); }
+#lnb .container .menu_tit { padding-right: 20px; }
+#lnb .container .menu_tit img { width: 135px; display: block; margin: 20px auto; }
+#lnb .w100 { background-color: #fbfbfb; top: 94px; left: 0; z-index: 2; box-shadow: 0 2px 2px rgba(0,0,0/7%); height: 0; overflow: hidden; transition: all .5s ease-in-out; padding: 0; }
+#lnb li:hover .w100 { height: auto; padding: 20px 0; } 
+#lnb .w100::before { content: ''; position: absolute; right: calc(50% + 20%); background-color: rgb(86, 155, 98); width: 100%; height: 100%; z-index: -1; }
+
+/* dep2 */
+/* li .w100 { display: none; }
+.dep1_2 > .w100 { display: block; } */
+#lnb li ul li { width: 200px; margin: 0; padding-left: 20px; border-left: 1px solid #c9c9c9; }
+#lnb li ul li a { text-align: left; }
+#lnb li ul li h2 { font-size: 1.5em; text-align: center; color: #e95a65; padding-top: 2px; }
+#lnb li ul li dl dt a { font-size: 1em; font-weight: bold; line-height: 180%; }
+#lnb li ul li dl dd a { font-size: 0.8em; font-weight: bold; line-height: 170%; padding-left: 10px; }
+#lnb li ul li h3 a { color: #097a84; font-weight: bold; line-height: 200%; margin-bottom: 3px; }
+
+/* main_banner */
+#main_banner { background: url("../img/bg.jpg") no-repeat; background-size: cover; height: 100vh; }
+#main_banner .banner1 { height: 200px; margin: 0 auto; position: relative; top: 50vh; left: 50%; transform: translate(-50%, -50%); }
+#main_banner .banner1 li { width: 33.3%; height: 100%; background-color: rgba(255,255,255,.4); text-align: center; font-size: 2em; }
+
+

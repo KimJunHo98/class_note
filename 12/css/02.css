@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+h1 ~ p { background-color: pink; }
+p + h1 { color: red; text-align: center; }
+p + h1::before { content: "❤"; }
+p + h1::after { content: '😜😢😊😂'; }
+h1 ~ h2::before { content: "💕"; }
+h1 ~ h2::after { content: '🎶🤦‍♂️🤦‍♀️'; }
+
+/* 속성 선택자 */
+/* 
+속성 | 의미 | 예문 |
+
+| ^ | 시작 | [속성^=” ”] | 속성의 값이 “ ”로 시작 |
+| $, ~ |  끝  | [속성$, ~=” ”] | 속성의 값이 “ ”로 끝남 |
+| * | 포함 | [속성*=” ”] | 속성의 값에 “ ”가 포함 |
+| = | 일치 | [속성=” ”]  | 속성의 값이 “ ”와 일치 | */
+
+a { font-size: 2em; }
+a[href] { background-color: aqua; }
+
+a[title="title"] { text-decoration: none; background-color: bisque; }
+
+a[title^="tit"] { color: #fff; }
+a[title^="tit"]::after { content: 'tit'; color: blueviolet; }
+
+a[title*="anc"] { border: 3px dotted #000; }
+a[title*="anc"]:before { content: 'anc'; color: #f00; }
+
+input[type] { border: 3px dotted red; }
+
+input[value~="message"] { border: 3px solid yellow; }
+label[for$="name"] { color: cadetblue; font-size: 20px; }
+
+/* 가상선택자 
+    :link =링크가 된 요소를 선택
+    :visited =방문한 적이 있는 요소를 선택
+    :hover =마우스가 올려져 있는 요소를 선택
+    :active =마우스로 누르고 있는 요소를 선택
+    :focus =키보드로 포커싱이 된 요소를 선택
+*/
+a:link, a:visited { font-size: 14px; padding: 5px; }
+a:hover, a:focus { background-color: #fff; color: aqua; }
+a:active { background-color: #f00; }
+
+/* 가상 클래스 */
+/* nth-child: 몇번째 자식 */
+table tr:nth-child(2) td { background-color: aqua; }
+table tr:nth-child(2) td:first-child { color: #f00; font-weight: bold; }
+/* 홀수번 */
+table tr:nth-child(odd) td { border: 2px solid pink; }
+/* 짝수번 */
+table tr:nth-child(even) td { background-color: yellow; }
+table tr:nth-child(2n) { font-size: 20px; font-weight: bold; }
+
+/* nth-of-type: 몇번째 태그 */
+p:nth-of-type(2) { background-color: wheat; }
+
+/* form에 사용하는 상태 선택자 */
+input:disabled { background-color: #ccc; border: 1px solid #eee; }
+input:checked + span { color: red; }
+
+/* 타겟팅 */
+h1:target { font-size: 3em; color: #fff; background-color: chartreuse; }
+p:target { font-size: 3em; color: #fff; background-color: yellowgreen; }

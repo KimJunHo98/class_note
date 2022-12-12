@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+    <style>
+        .subm { display: block; background-color: #e9fd8e; border: 1px solid #62ce5f; border-radius: 3px; padding: 5px 10px 6px 7px; cursor: pointer; }
+        .subm img { width: 16px; height: 16px; border: none; padding: 0; vertical-align: top; }
+        .subm:hover, .subm:focus { width: 90px; height: 90px; background-color: #b8d146; border: 1px solid #4cc248; color: #fff; border-radius: 50%; transition: all .3s ease-in; }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <h2>multiple</h2>
+        <select multiple size="4">
+            <option value="건축" selected>건축</option>
+            <option value="기계">기계</option>
+            <option value="산업">산업</option>
+            <option value="전기">전기</option>
+            <option value="화학">화학</option>
+            <option value="컴퓨터">컴퓨터</option>
+        </select>
+        <h2>optgroup</h2>
+        <select>
+            <optgroup label="공과대학">
+                <option value="건축" selected>건축</option>
+                <option value="기계">기계</option>
+                <option value="산업">산업</option>
+                <option value="전기">전기</option>
+                <option value="화학">화학</option>
+                <option value="컴퓨터">컴퓨터</option>
+            </optgroup>
+            <optgroup label="인문대학">
+                <option value="사학">사학</option>
+                <option value="어문">어문</option>
+                <option value="철학">철학</option>
+            </optgroup>
+        </select>
+        <h2>datalist</h2>
+        <label for="interest">관심분야</label>
+        <input type="text" id="interest" list="choices">
+        <datalist id="choices">
+            <option value="grammer" label="문법"></option>
+            <option value="voca" label="어휘"></option>
+            <option value="speaking" label="회화"></option>
+            <option value="listening" label="듣기"></option>
+            <option value="news" label="뉴스"></option>
+        </datalist>
+        <h2>button</h2>
+        <button type="submit" class="subm">
+            <img src="images/tick.png" alt="">전송하기
+        </button>
+    </form>
+</body>
+</html>

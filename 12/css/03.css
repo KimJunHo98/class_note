@@ -1,0 +1,8 @@
+@charset "urf-8";
+
+#container { width: 960px; margin: 0 auto; border-bottom: 2px solid #ccc; }
+.navi { width: 100%; height: 60px; padding-bottom: 10px; }
+.navi ul li { width: 150px; display: inline-block; padding: 10px; line-height: 60px; }
+.navi ul li a { display: block; font-weight: bold; }
+.navi ul li a + ul { display: none; }
+.navi ul li a:hover + ul { display: block; }

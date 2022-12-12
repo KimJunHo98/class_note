@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-tip</title>
+    <style>
+        .border_tip { width: 500px; height: 100px; background-color: aqua; position: relative; top: 100px; left: 50%; transform: translate(-50%); }
+        /* position속성을 중앙정렬 하려면 left: 50%로 지정한 후
+            margin: 중앙정렬 하고자 하는 축을 기준으로 요소의 넓이 값의 절반을 음수로 지정하면 넓이 값의 절반만큼 움직임
+        */
+        .border_tip:before { 
+            content: ""; display: block; position: absolute; top: -20px; left: 50%; margin-left: -10px; width: 1px; height: 1px; border-top: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid aqua; border-left: 10px solid transparent; 
+        }
+        .border_tip:after { 
+            content: ""; display: block; position: absolute; bottom: -20px; left: 50%; margin-left: -10px; width: 1px; height: 1px; border-top: 10px solid aqua; border-right: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid transparent; 
+        }
+        .border_tip .left:before {
+            content: ""; display: block; position: absolute; top: 50%; left: -20px; margin-top: -10px; width: 1px; height: 1px; border-top: 10px solid transparent; border-right: 10px solid aqua; border-bottom: 10px solid transparent; border-left: 10px solid transparent; 
+        }
+        .border_tip .left:after {
+            content: ""; display: block; position: absolute; top: 50%; right: -20px; margin-top: -10px; width: 1px; height: 1px; border-top: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid aqua; 
+        }
+        .speech {
+            width: 300px; height: 150px; background-color: #333; border-radius: 50%; position: relative; top: 300px; left: 500px;
+        }
+        .speech::before {
+            content: ""; display: block; width: 50px; height: 50px; position: absolute; bottom: -15px; border-right: 40px solid #333; border-left: 40px solid transparent; border-radius: 50%;
+        }
+        .heart { width: 80px; height: 130px; background-color: red; position: relative; top: 500px; left: 500px; border-radius: 80px 80px 0 0; transform: rotate(-45deg); }
+        .heart::before { content: ""; width: 80px; height: 130px; position: absolute; bottom: -25px; right: -25px; background-color: red; border-radius: 80px 80px 0 0; transform: rotate(90deg); }
+    </style>
+</head>
+<body>
+    <div class="border_tip">
+        <span class="left"></span>
+        <span class="right"></span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sed perspiciatis earum fuga! Dignissimos laboriosam quibusdam dolores laudantium, voluptatum est velit fugiat quasi animi sit id delectus illo iusto veritatis.
+    </div>
+    <div class="speech"></div>
+    <div class="heart"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>동영상 배경을 풀사이즈로 넣기</title>
+	<style>
+		#container {
+		position: relative;
+		text-align: center;
+		}
+		h2 {
+		font-size: 2em;
+		}
+		h1 {
+		font-size: 3.5em;
+		}
+		a:link,
+		a:visited {
+		text-decoration: none;
+		color: #222;
+		}
+		a:hover {
+		cursor: pointer;
+		}
+		#bg { position: fixed; top: 0; left: 0; width: auto; height: auto; min-width: 100%; min-height: 100%; z-index: -100; background: url("../11/images/flame.jpg") no-repeat left top/cover; }
+	</style>
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<body class="ie">
+	<![endif]-->
+</head>
+<body>
+	<div id="bg"></div>
+	<video id="bg1" src="media/flame.mp4" poster="images/bg2.jpg" autoplay loop></video>
+	<div id="container">
+		<h2>사람을 구체적으로 도와주는 책</h2>
+		<h1><a href="http://www.easyspub.co.kr">이지스퍼블리싱</a></h1>
+	</div>
+</body>
+</html>

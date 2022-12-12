@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>table</title>
+	<style>
+		table, th, td { border: 1px solid black; }
+		th { padding: 15px; }
+		tr > td:nth-child(2n) { width: 120px; } /* nth-child(odd): 홀수, nth-child(even): 짝수 nth-child(2n): 2의 배수번쨰수 */
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>이름</th>
+			<td></td>
+			<th>연락처</th>
+			<td></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td colspan="3"></td>
+		</tr>
+		<tr>
+			<th>자기소개</th>
+			<td colspan="3"></td>
+		</tr>
+	</table>
+</body>
+</html>

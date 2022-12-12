@@ -1,0 +1,17 @@
+/* 여백초기화 */
+* { margin: 0; padding: 0; }
+
+body { background-color: #fff; }
+
+/* 불릿기호 초기화 */
+ul { list-style: none; }
+
+/* 주문서 시작 */
+.container {  width: 600px; margin: 0 auto; }
+h1 { text-align: center; margin: 20px 0; }
+form fieldset { padding: 20px; margin: 15px 10px; }
+form fieldset legend { color: #b63b3b; font-size: 18px; font-weight: bold; }
+form fieldset:nth-child(3) ul li label { width: 90px; display: inline-block; }  
+form ul li { padding: 10px; font-size: 14px; }
+form ul li .title { width: 80px; font-weight: bold; display: inline-block; }
+form .button { text-align: center; }

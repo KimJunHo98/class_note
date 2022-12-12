@@ -1,0 +1,6 @@
+@charset "utf-8"; 
+/* css의 주석이 꺠지지 않고 보여주기 위해 언어선택을 해줌 */
+
+h2 { color: pink !important; }
+p#ptag { color: red; }
+#ptag.title { color: #000; }

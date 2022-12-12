@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박스모델</title>
+	<style>
+		.wrap { width: 1000px; margin: 0 auto; }
+		.container { background-color: rgb(71, 71, 71); text-align: center; }
+		div { padding: 20px; }		
+		.box1 { background-color: rgb(255, 139, 139); margin-right: 10px; float: left; }
+		.box2 { background-color: rgb(239, 250, 143); display: inline-block; }
+		.box3 { background-color: rgb(163, 255, 194); margin-right: 10px; float: right; }
+		.box4 { background-color: rgb(155, 170, 255); clear: both; }
+		/* 	float 요소 가운데 정렬하기
+			1. float: left 속성을 display: inline-block으로 대체 
+			2. 부모한테 text-align: center 적용으로 가운데 정렬 
+		*/
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="container">
+			<div class="box1">박스1</div>
+			<div class="box2">박스2</div>
+			<div class="box3">박스3</div>
+		</div>
+		<div class="box4">박스4</div>
+	</div>
+</body>
+</html>

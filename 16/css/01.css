@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* display: flex 블록요소의 박스를 플렉서블 박스로 작동
+    display: inline-flex 인라인요소의 박스를 플렉서블 박스로 작동
+*/
+.container { display: flex; }
+
+/* flex-direction: 배치 방향을 설정 */
+#opt1 { flex-direction: row; } /* 왼쪽 -> 오른쪽 */
+#opt2 { flex-direction: row-reverse } /* 오른쪽 -> 왼쪽 */
+#opt3 { flex-direction: column; } /* 위 -> 아래 */
+#opt4 { flex-direction: column-reverse; } /* 아래 -> 위 */

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body { font-size: 14px; font-family: "맑은 고딕", sans-serif; }
+
+a { text-decoration: none; color: #fff; }
+
+.container { width: 960px; margin: 0 auto; border: 1px solid #e7e7e7; }
+
+header { height: 280px; position: relative; background: url("../images/bg.png") no-repeat left top; background-size: cover; }
+header h1 { position: absolute; bottom: 70px; right: 20px; font-size: 3em; color: #ffc; text-shadow: 1px 2px 2px #000; }
+header h2 { position: absolute; bottom: 30px; right: 20px; font-size: 2em; color: #e6e619; text-shadow: 1px 2px 2px #000; }
+nav { position: relative; margin-top: -15px; background-color: #333; }
+nav ul { list-style: none; height: 40px; padding: 10px 0 5px; text-align: center; }
+nav ul li { display: inline-block; font-size: 15px; }
+nav ul li a { width: 150px; display: block; padding: 10px 5px 15px 35px; }
+nav ul li a:hover, nav ul li a:focus { text-shadow: 0 2px 2px #000; color: #fc0; }  
+
+article .content { width: 720px; float: left; padding: 5px 0 0 10px; }
+article .banner { margin: 0 10px 15px 10px; padding: 0; }
+
+.sidebar { float: right; width: 200px; background-color: #dfd; padding: 20px 10px 0 10px; }
+.sidebar p { padding: 10px 0; }
+.sidebar img { margin-bottom: 5px; border: 1px solid #ccc; text-align: center; }
+
+footer { padding: 10px 0; background-color: #030; color: #fff; text-align: center; clear: both; }

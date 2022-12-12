@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "dr";
+    src: url("./fonts/SCDream1.woff"), url("./fonts/SCDream1.eot");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "dr";
+    src: url("./fonts/SCDream5.otf"), url("./fonts/SCDream5.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "dr";
+    src: url("./fonts/SCDream9.woff"), url("./fonts/SCDream9.otf");
+    font-weight: 900;
+}

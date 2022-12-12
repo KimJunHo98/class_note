@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body { background-color: rgb(250, 193, 242); }
+        #wrap { width: 1000px; height: 900px; margin: 0 auto; text-align: center; color: #fff; font-size: 2em; }
+        header { width: 800px; height: 200px; background-color: rgb(112, 36, 100);  }
+        aside { width: 200px; height: 900px; background-color: rgb(72, 25, 78);  }
+        section { width: 800px; height: 600px; background-color: rgb(146, 58, 134);  }
+        footer { width: 800px; height: 100px; background-color: rgb(218, 102, 208);  }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 부모가 너비와 높이를 가지고 있으면 clear속성을 사용하지 않아도 됨 -->
+        <aside class="fl">
+            <h2>side</h2>
+        </aside>
+        <header class="fl">
+            <h2>header</h2>
+        </header>
+        <section class="fl">
+            <h2>content</h2>
+        </section>
+        <footer class="fl">
+            <h2>footer</h2>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>visibility 속성</title>
+	<style>
+		img { border: 1px solid #000; }
+		.invisible { transition: all .3s ease-in; }
+		img:first-child:hover + .invisible { opacity: 0; }
+		/* visibility: visible(기본값) 
+			hidden(공간은 가지고 보이지 않음)
+
+			*display: none(요소 자체를 없애서 공간이 사라지고 보이지 않음)
+			*opacity: 0(요소의 불투명도를 0으로 지정하면 공간은 가지고 보이지 않음)
+		*/
+	</style>
+</head>
+<body>
+	<img src="images/pic1.jpg">
+	<img src="images/pic2.jpg" class="invisible">
+	<img src="images/pic3.jpg">
+</body>
+</html>

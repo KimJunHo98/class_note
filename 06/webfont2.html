@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>웹 폰트 사용하기</title>
+    <style>
+      /* 웹 폰트 */
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+      /* import url로 폰트를 연결할 때 상단에 선언
+        폰트관련 파일이나 링크는 title태그 바로 아래에 선언
+      */
+      @font-face {
+        font-family: 'PuradakGentleGothicR';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+      .g-font { font-family: "Noto sans KR"; font-weight: 500; }
+      .ng-font { font-family: 'PuradakGentleGothicR'; font-weight: normal; font-style: normal; }
+    </style>
+</head>
+<body>
+  <p class="g-font">브라우저 기본 글꼴 사용</p>
+  <p class="ng-font">나눔고딕 웹 폰트 사용</p>
+</body>
+</html>

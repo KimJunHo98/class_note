@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul { list-style: none; }
+        fieldset { border: none; }
+        ul li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <!-- 코딩컨벤션
+        aBc: 카멜케이스
+        a_bc: 스네이크케이스
+        a-bc: 케밥
+        케이스
+    -->
+    <h1>예약문의</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <p>
+                <label for="user_name">작성자</label>
+                <input type="text" id="user_name" name="user_name">
+            </p>
+            <p>
+                <label for="user_pw">비밀번호</label>
+                <input type="password" id="user_pw" name="user_pw">
+            </p>
+            <p>
+                <label for="user_title">제목</label>
+                <input type="text" id="user_title" name="user_title">
+            </p>
+            <p>예약하실 객실을 선택해주세요.
+                <label>
+                    <input type="radio" name="user_room" value="single" checked>single
+                </label>
+                <label>
+                    <input type="radio" name="user_room" value="double">double
+                </label>
+                <label>
+                    <input type="radio" name="user_room" value="twin">twin
+                </label>
+                <!-- input type="radio": name속성 값을 중복 사용가능 -->
+            </p>
+            <p>
+                기타패키지 옵션을 선택하세요. <br>
+                <label>
+                    <input type="checkbox" name="user_option1" value="조식">조식
+                </label>
+                <label>
+                    <input type="checkbox" name="user_option2" value="바베큐">바베큐
+                </label>
+                <label>
+                    <input type="checkbox" name="user_option3" value="픽업 서비스">픽업 서비스
+                </label>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

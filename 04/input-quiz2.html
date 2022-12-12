@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제2</title>
+</head>
+<body>
+    <div id="container">
+        <h1>문제1</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>사용자</legend>
+                    <ul>
+                        <li>
+                            <label for="user_id">아이디</label>
+                            <input type="text" name="user_id" id="user_id" required>
+                        </li>
+                        <li>
+                            <label for="user_email">이메일</label>
+                            <input type="email" name="user_email" id="user_email" required>
+                        </li>
+                        <li>
+                            <label for="user_pw">비밀번호</label>
+                            <input type="password" name="user_pw" id="user_pw" required>
+                        </li>
+                        <li>
+                            <label for="pw_check">비밀번호 확인</label>
+                            <input type="password" name="pw_check" id="pw_check" required>
+                        </li>
+                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend>이벤트수신동의</legend>
+                <p>
+                    <input type="radio" name="mailing" id="mailing1" checked>
+                    <label for="mailing1">동의함</label>
+                    <input type="radio" name="mailing" id="mailing2">
+                    <label for="mailing2">동의안함</label>
+                </p>
+            </fieldset>
+            <div id="buttons">
+                <button type="submit" value="가입하기">가입하기</button>
+                <button type="reset" value="취소">취소</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

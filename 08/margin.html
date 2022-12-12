@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박스모델</title>
+	<style>
+		* { margin: 0; padding: 0; }
+		div { width: 200px; height: 100px; background-color: #0094ff; }
+		.box1 { 
+			border: 10px solid #000; 
+			border-top: 10px double red;
+			border-left: 10px dashed green;
+			border-right: 10px dotted orange;
+			border-bottom: none;
+			width: 180px; height: 80px;
+		}
+		.box2 { padding: 10px; background-color: #ff0; }
+		.box3 { background-color: #f0f; margin: 10px; }
+		/* padding: 안쪽 여백에 크기를 줘서 박스 크기에 영향을 줌
+			margin: 바깥쪽 여백에 크기를 줘서 박스 크기에는 영향을 안줌
+		*/
+		.box4 { background-color: #0f0; border: 10px solid #000; border-right: transparent; border-left: rgba(0,0,0,0); }
+		/* border 색상을 투명으로하면 선 두께 사라짐 */
+
+		.box1 { margin: 40px; display: inline; }
+		.box2 { margin: 40px; display: inline-block; }
+		.box3 { margin: 80px; }
+		/* margin병합 
+		1. 인접해있는 Block 요소 사이에서 병합. inline 요소사이에서는 마진 병합이 발생하지 않고 block 요소사이에서만 병합이 일어남
+		2. 상하단의 병합. 좌우로는 마진 병합이 일어나지 않고 상하 사이에서만 병합이 일어남
+		-- 마진병합방법--
+		text 넣기
+		부모 요소에 padding, border 값 주기
+		자식 요소 inline-block으로 만들기
+		부모 요소에 overflow:hidden 값 주기
+		*/
+		.box4 { margin: 20px 0; }
+		.box4, .box4 div { width: 200px; height: 200px; }
+		.box4 div.child { height: 100px; width: 100px; background-color: rgb(255, 230, 0); }
+		.box4 div.grandchild { height: 50px; width: 50px; margin-top: 200px 0; }
+
+		.box5 { background-color: #f00; margin-bottom: 100px; color: #fff; border: 10px solid #000; box-sizing: border-box; padding: 20px; }
+		/* box-sizing: border-box속성을 사용하면 지정한 넓이,높이 값에서 벗어나지 않고 크기 값을 넣을 수 있다. 요소 안의 컨텐츠의 사이즈가 줄어듦.
+		content-box속성이 기본값으로 컨텐츠의 크기는 변하지 않고 요소의 크기가 변함. 마진, 패딩, 보더를 사용하면 전체크기가 변함
+		*/
+	</style>
+</head>
+<body>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+	<div class="box4 parent">parent
+		<div class="child">child
+			<div class="grandchild">
+				<span>
+					box4
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="box5">box5</div>
+</body>
+</html>

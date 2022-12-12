@@ -1,0 +1,5 @@
+.container { width: 450px; height: 150px; display: flex; margin: 0 auto 20px; }
+
+/* align-self: 자식요소의 교차축 방향을 개별적으로 배치(align-items값을 상속받음, 없는경우 strech속성값 적용)*/
+#box1 { align-self: flex-start; }
+#box2 { align-self: center; }

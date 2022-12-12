@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress.html</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <label>10초남음</label>
+        <progress value="50" max="60"></progress>
+        <br>
+        <label>진행률 30%</label>
+        <progress value="30" max="100"></progress>
+    </form>
+    <br>
+    <h1>progress.js</h1>
+    <form action="#">
+        <input type="button" value="다운로드시작" onclick="dwn()">
+        <progress id="bar" value="0" max="100"></progress>
+    </form>
+
+    <!-- script -->
+    <script>
+        function dwn(){
+
+            var bar = document.getElementById("bar");
+            var loaded = 0; // 초기값
+            
+            var load = function(){
+                loaded = loaded + 5;
+                bar.value = loaded;
+
+                if(loaded == 100){
+                    clearInterval(dummyLoad);
+                }; //setInterval 취소 = clearInterval(setInteval id)
+                console.log(loaded);
+            };
+            
+            // 시간마다 할 일
+            var dummyLoad = setInterval(function(){
+                load();
+            }, 500);
+            // serInterval(할 일, 시간)
+        };
+    </script>
+</body>
+</html>

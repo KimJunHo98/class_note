@@ -1,0 +1,10 @@
+.container { display: flex; }
+
+/* flex-wrap: 줄바꿈 설정 */
+#opt1 { flex-wrap: nowrap; } /* 한줄로 표시 */
+#opt2 { flex-wrap: wrap; } /* 줄바꿈 */
+#opt3 { flex-wrap: wrap-reverse; } /* 반대로 줄바꿈 */
+
+/* flex-flow: flex-direction, flex-wrap의 축약형 */
+#opt4 { flex-flow: row wrap; }
+

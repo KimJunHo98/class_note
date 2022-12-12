@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>table</title>
+	<style>
+		table, th, td { border: 1px solid black; }
+		th, td { padding: 10px; }
+		th { width: 100px; }
+		tr > td:nth-child(even) { width: 150px; }
+		tr > td:nth-child(odd) { width: 300px; }
+	</style>
+</head>
+<body>
+	<p id="summary">다음 표는 HTML5를 지원하는 모던 브라우저를 정리한 것입니다.</p>
+	<table aria-describedby="summary">
+		<tr>
+			<th>브라우저</th>
+			<th>제조업체</th>
+			<th>다운로드</th>
+		</tr>
+		<tr>
+			<th>크롬</th>
+			<td>google</td>
+			<td>dadsa</td>
+		</tr>
+		<tr>
+			<th>파이어폭스</th>
+			<td>mozlia</td>
+			<td>cxzczx</td>
+		</tr>
+		<tr>
+			<th>엣지</th>
+			<td>ada</td>
+			<td>asdas</td>
+		</tr>
+	</table>
+</body>
+</html>

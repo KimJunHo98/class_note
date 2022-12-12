@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <!--action: 입력된 정보가 저장될 서버 컴퓨터의 경로 -->
+    <!-- method: 입력된 정보를 어떤 식으로 보낼건지 결정 -->
+    <!-- get: 정보가 개방적임, 글자 수가 제한적, 경로가 표시됨 ex) 검색창 -->
+    <!-- post: 정보를 암호화해서 보냄, 글자 수 제한없음, 경로 표시가 안됨 ex) 로그인 창, 주민등록증, 개인정보 등 -->
+    <form action="action.php" method="post"> 
+        <input type="text" value="naver">
+        <input type="submit" value="검색">
+        <!-- text: 글자 -->
+        <!-- submit: 제출 -->
+    </form>
+</body>
+</html>

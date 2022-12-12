@@ -1,0 +1,10 @@
+.container { width: 200px; height: 150px; display: flex; flex-flow: row wrap; margin: 30px; float: left; }
+.box { margin: 0; padding: 0; border: 1px dotted #e9e9e9; }
+
+/* align-content: 자식 요소의 여러 줄인 플렉스 아이템을 교차축 방향으로 배치(justify-content 속성값과 같음) */
+#opt1 { align-content:flex-start; }
+#opt2 { align-content: flex-end; }
+#opt3 { align-content: center; }
+#opt4 { align-content:space-around; }
+#opt5 { align-content: space-between;}
+#opt6 { align-content:stretch; }

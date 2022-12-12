@@ -1,0 +1,14 @@
+.container { width: 80%; height: 150px; display: flex; align-items: center; }
+.box { width: 60px; height: 60px; margin: 5px; }
+
+/* flex-
+    grow: 부모의 남는 공간에 맞춰서 늘림
+    shrink: 부모의 부족한 공간에 맞춰서 좁힘
+    basis: 기본 크기를 설정 
+*/
+#box1 { flex-basis: 100px; }
+#box2 { flex-grow: 3; } /* 배수 */
+#box3 { flex-shrink: 5; } /* 배수 */
+#box4 { flex: 1 5 120px; } /* flex: grow shrink basis의 축약형*/
+#box5 { flex-basis: 120; } /* basis는 단위를 안 쓰면 %로 적용 */
+

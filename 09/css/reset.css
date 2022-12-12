@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; border: 0; }
+ul,li,ol { list-style: none; }
+a { text-decoration: none; }
+
+.fl { float: left; }
+.fr { float: right; }
+
+/* clearfix */
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { content: ""; display: block; line-height: 0; }
+.clearfix:after { clear: both; }
