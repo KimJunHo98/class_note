@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프라이트 메뉴</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        body { font: 62.5% Verdana, Arial, Helvetica, sans-serif; padding: 20px; }
+        .nav { width: 700px; margin: 0 auto; display: flex; flex-direction: row; }
+        .nav li a { width: 80px; display: block; padding: 10px 5px 10px 30px; color: #000; font-size: 11px; border: 1px dashed #999; background: url("../17/img/nav.png") no-repeat 0 -90px; background-size: 31px; }
+        .nav li:first-child a { background: url("../17/img/home.png") no-repeat 0 2px/31px; background-color: #e9e9e9; }
+        .nav li:nth-child(2) a { background-position: 0 3px; background-color: #e9e9e9; }
+        .nav li a:hover { background-position: 0 -46px; background-color: #b2f511; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">철학관소개</a></li>
+            <li><a href="#">음양오행이란?</a></li>
+            <li><a href="#">심리테스트</a></li>
+            <li><a href="#">타로</a></li>
+            <li><a href="#">별자리</a></li>
+        </ul>
+    </header>
+</body>
+</html>
