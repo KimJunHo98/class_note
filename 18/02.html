@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>em,rem</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-style: 100%;
+    }
+    :root{
+      font-size:50px;
+    }
+    /* 브라우저의 기본 크기가 16px */
+    #para1 {
+      font-size: 6em;
+      /* 16px*6em=96px */
+    }
+
+    #para1 p {
+      font-size: 2em;
+      /* 96px*2em=192px  */
+    }
+
+    #para2 {
+      font-size: 6rem;
+      /* root(뿌리: 최상위) 
+      root 기준 em => rem
+      16px*6em=96px */
+    }
+    
+    #para2 p {
+      font-size: 2rem;
+      /* 16px*2rem=32px  */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="para1"> 가변폰트공식: 자식폰트/부모폰트 <p>대문자M의 너비를 기준으로 한 단위 <br>1em은 약 16px</p>
+  </div>
+  <div id="para2"> 가변폰트공식: 자식폰트/부모폰트 <p>대문자M의 너비를 기준으로 한 단위 <br>1rem은 약 16px</p>
+  </div>
+</body>
+
+</html>

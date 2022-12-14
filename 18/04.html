@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vw VS per</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-style: 100%;
+    }
+    body{width:80vw; background-color: ivory;}
+    span{display:block; color:greenyellow;}
+    /* 퍼센트는 부모요소 기준 */
+    .per{width:100%; background-color: coral;}
+    .per p {width:50%; background-color: green;}
+    .per p span { width: 100%; background-color:cadetblue; }
+
+    /* vw는 화면 기준 */
+    .vw { width: 50vw; background-color: gray; height: 300px; }
+    .vw p { width: 50vw; background-color: #cecece; height: 100px; }
+    .vw p span { width: 100vw; background-color: #f0f; }
+  </style>
+</head>
+
+<body>
+  <div class="per">
+    <p>부모너비기준:percent <span>percent</span>
+    </p>
+  </div>
+  <div class="vw">
+    <p>화면너비기준:vw <span>viewport width</span>
+    </p>
+  </div>
+</body>
+
+</html>
