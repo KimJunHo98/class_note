@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- 모스트리플루이드 -->
+	<title>Mostly Fluid</title>
+	<!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body,
+		h1,
+		h2,
+		h3,
+		h4 {
+			font-family: verdana, sans-serif;
+			font-size: 12px;
+		}
+
+		#header {
+			background-color: red;
+			line-height: 40px;
+		}
+
+		/* 1. wrap 의 너비가 960으로 지정되어 화면의 폭이 960 이하일때 가로스크롤 생김 
+	    방지하려면 너비를 960이하일때 퍼센트로 지정  */
+		#wrap {
+			width: 100%;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+
+		#container:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		#content {
+			float: left;
+			width: 600px;
+			background-color: lime;
+		}
+
+		#aside {
+			float: right;
+			width: 340px;
+			background-color: green;
+		}
+
+		#footer {
+			margin-top: 30px;
+			background-color: silver;
+			line-height: 30px;
+		}
+
+
+		/* 2. 960이하의 미디어 쿼리 작성->최대너비 960이니까 960이하 */
+		@media screen and (max-width:960px) {
+
+			/* 3. wrap 너비를 100으로 하니까 자식의 박스의 총 너비보다 좁아서 자식이 떨어진다 */
+			
+			/* 4.  960이 100%일때 content 너비 600을 계산 (600/960)*100 (부분/전체)*100 */
+			#content {
+				width: 62.5%;
+			}
+
+			/* 5. aside 도 계산한다 */
+			#aside {
+				width: 35%;
+			}
+		}
+
+		/* 6. 480이하일때 전부 밑으로  */
+		@media screen and (max-width:480px) {
+			#wrap {
+				width: 100%;
+			}
+
+			#content {
+				width: 100%;
+				float: none;
+			}
+
+			#aside {
+				width: 100%;
+				float: none;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<h1>Layout example</h1>
+		</header>
+
+		<div id="container">
+			<section id="content">
+				<h2>Content area</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dolores, iste, expedita necessitatibus dolor quos facere beatae voluptas deserunt eum commodi quisquam aperiam itaque quae labore error suscipit consequuntur magni incidunt accusantium rerum nisi explicabo illum! Eveniet, dignissimos, atque, vel voluptas voluptatem minima ipsum tenetur laboriosam quas recusandae animi illum iure cumque deleniti optio quod veniam excepturi architecto doloremque dolorum pariatur aspernatur rerum quia? Delectus, nesciunt quis vero ab modi necessitatibus atque sint nobis! Neque, temporibus, quibusdam maxime consequuntur animi alias rerum doloremque porro id provident itaque eius vel fuga repellendus odit sit veniam atque vero inventore ex? Est, quis.</p>
+			</section>
+
+			<aside id="aside">
+				<h2>Aside area</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sapiente modi magni nemo corrupti voluptatem nostrum facilis cumque fugiat rerum ullam eius quis voluptatibus dolores distinctio. Quibusdam blanditiis maxime voluptatibus.</p>
+			</aside>
+		</div><!-- //container -->
+
+		<footer id="footer">
+			<p>Copyright &copy; 2014</p>
+		</footer>
+	</div><!-- //wrap -->
+
+</body>
+
+</html>
