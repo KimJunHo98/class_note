@@ -1,0 +1,11 @@
+@media (max-width: 600px) {
+    .products .product_card {
+        flex: 1 46%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { margin-bottom: 20px; }
+    nav.product-filter { flex-direction: column; }
+    .sort { align-self: flex-start; }
+}

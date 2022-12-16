@@ -73,6 +73,10 @@ $("#cbtn8").click(function(e){
     $(".cday8").slideToggle(200);
     $(this).toggleClass("open");
 });
+$("#cbtn9").click(function(e){
+    $(".cday9").slideToggle(200);
+    $(this).toggleClass("open");
+});
 $("#cbtn10").click(function(e){
     $(".cday10").slideToggle(200);
     $(this).toggleClass("open");
@@ -81,8 +85,8 @@ $("#cbtn11").click(function(e){
     $(".cday11").slideToggle(200);
     $(this).toggleClass("open");
 });
-$("#cbtn9").click(function(e){
-    $(".cday9").slideToggle(200);
+$("#cbtn12").click(function(e){
+    $(".cday12").slideToggle(200);
     $(this).toggleClass("open");
 });
 

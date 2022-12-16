@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            overflow-x: hidden; /* 가로방향 스크롤 숨김 */
+            overflow-y: scroll;
+        }
+        section { display: flex; flex-direction: row; }
+        .container4 img { display: block; max-width: 100%; }
+        section div { border: 2px solid #2ecc71; margin-left: 6px; }
+
+        @media all and (max-width: 768px) {
+            body { background-color: #333; color: #3496db; }
+            section { flex-direction: column; }
+            p { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container1">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam mollitia, consequuntur aliquid nobis vitae soluta maiores expedita ipsam delectus molestiae! </p>
+        </div>
+        <div class="container2">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur architecto temporibus sed officiis vero, quisquam, corrupti quis veritatis dolor amet nostrum quam! Voluptates nam architecto enim neque nemo consectetur molestias unde fugit dolorum alias temporibus expedita doloribus deserunt laborum asperiores illum saepe, voluptate rerum quia sit facilis consequuntur perferendis aperiam. Nobis reiciendis debitis consequuntur placeat maiores voluptas, quos esse eum. </p>
+        </div>
+        <div class="container3">
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus fugiat, nemo rem facere cumque error. Aliquam consequatur nobis cupiditate atque! Fugiat amet facere magni, nulla pariatur ut ullam, vel est eum voluptatum dicta quis dignissimos labore repellendus. Maiores deserunt quas tempore impedit, corporis quae amet blanditiis voluptatum laudantium magni ipsa! </p>
+        </div>
+        <!-- 화면 크기에 대응하는 이미지 -->
+        <!-- 화면 너비가 400px 이상일 때 이미지 300px -->
+        <!-- 화면 너비가 800px 이상일 때 이미지 500px -->
+        <div class="container4">
+            <picture>
+                <source srcset="https://placedog.net/500?id=12" media="all and (max-width: 400px)">
+                <source srcset="https://placedog.net/500?id=1" media="all and (max-width: 800px)">
+                <img src="https://placedog.net/500?id=18" alt="">
+            </picture>
+            <!-- <img src="https://placedog.net/500?id=1" alt=""> -->
+        </div>
+    </section>
+</body>
+</html>
