@@ -1,0 +1,2 @@
+/* appearance: 브라우저의 기본 select버튼 모양 감추기 */
+select { -webkik-appearance: none; -moz-appearance: none; appearance: none; width: 200px; padding: 0.8em 0.5em; border-radius: 10px; border: 1px solid #999; background: url("../img/down-arrow.svg") no-repeat 90% center/15px; }

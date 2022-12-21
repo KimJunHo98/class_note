@@ -1,0 +1,28 @@
+.checkbox, .toggle { margin: 2em 0; }
+
+/* bigcheckbox, bigradio */
+.checkbox input.check1, .checkbox input.radio1 { font-size: 1em; width: 1.25em; height: 1.25em; vertical-align: middle; }
+.checkbox input.check1 + label, .checkbox input.radio1 + label { font-size: 1.25em; vertical-align: middle; }
+
+/* 디자인체크박스 */
+.checkbox input.check2 { display: none; }
+.checkbox input.check2 +label { position: relative; }
+.checkbox input.check2 +label:before { 
+    content: ""; display: inline-block; width: 1.25em; height: 1.25em; 
+    border-radius: 50%; background-color: blueviolet; border: 2px solid #000; margin: 0 5px -6px 0;
+}
+.checkbox input.check2 + label:after { 
+    content: "✔"; color: #fff; position: absolute; top: 1px; left: 7px; 
+    font-size: .8em; transition: all .3s ease-in; opacity: 0; transform: scale(0);
+}
+input:checked.check2 + label:after { opacity: 1; transform: scale(1); }
+
+/* toggle */
+.toggle { position: relative; display: inline-block; }
+.toggle input { display: none; }
+.toggle label { display: block; width: 48px; height: 24px; text-indent: -280%; user-select: none; }
+.toggle label:before, .toggle label:after { content: ""; display: block; position: absolute; cursor: pointer; }
+.toggle label:before { width: 100%; height: 100%; background-color: #dedede; border-radius: 30px; transition: background-color .25s ease; }
+.toggle label:after { width: 24px; height: 24px; top: 0; left: 0; background-color: #fff; border-radius: 50%; box-shadow: 0 0 4px rgba(0,0,0,.45); transition: left .25s ease; }
+.toggle input:checked + label:before { background-color: skyblue; }
+.toggle input:checked + label:after { left: 24px;  }

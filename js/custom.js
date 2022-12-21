@@ -89,6 +89,20 @@ $("#cbtn12").click(function(e){
     $(".cday12").slideToggle(200);
     $(this).toggleClass("open");
 });
+$("#cbtn13").click(function(e){
+    $(".cday13").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#cbtn14").click(function(e){
+    $(".cday14").slideToggle(200);
+    $(this).toggleClass("open");
+});
+
+//------------------------ script ------------------------
+$("#js1").click(function(e){
+    $(".jsday1").slideToggle(200);
+    $(this).toggleClass("open");
+});
 
 
 

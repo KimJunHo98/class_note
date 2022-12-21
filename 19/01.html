@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform</title>
+  <style>
+    .box-conatiner,
+    .box-conatiner2 {
+      display: flex;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 0, 0.7);
+      border: 2px solid;
+    }
+
+    .box-conatiner .box:nth-child(2):hover {
+      /*       width:200px;
+      height:200px; */
+      transform: scale(2) rotate(45deg);
+      /* 크기,회전 */
+      transform: skew(-45deg);
+      /* 비틀기 */
+      transform: skewY(30deg);
+      transform: skewX(30deg);
+      transform: translate(30px, 10px);
+      /* 이동 x,y*/
+      transform: translateX(30px) translateY(-30px);
+      /* 이동 x,y*/
+      transform: scale(3);
+      /* 기준점이동 */
+      transform-origin: right bottom;
+      transform-origin: 0% 0%;
+      /*x, y*/
+      transform-origin: 50% 50%;
+      /*x, y*/
+    }
+
+    .box-conatiner2 .box:nth-child(2):hover {
+      margin-left: 200px;
+      width: 200%;
+    }
+
+    /* 공간은 남기고 요소만 이동 */
+    .box-conatiner2 .box:nth-child(4):hover {
+      /* transform:translate(100px,0); */
+      position: relative;
+      position: absolute;
+      left: 100px;
+    }
+
+    /* 트랜스폼 여러개 사용 */
+    #my-box {
+      width: 8em;
+      height: 10em;
+      padding: 1em;
+      margin: 1em 20em;
+      background-color: #eee;
+      background-image: linear-gradient(#fff, #ccc);
+      border-radius: 1em;
+      box-shadow: 3px 3px 6px rgb(0 0 0 /80%);
+      transform: translate(-50%, 0) scale(0.8, 1) rotate(-20deg) skewX(25deg) skewY(10deg) skew(25deg,10deg);
+    }
+    #my-box:hover{transform:none;}
+  </style>
+</head>
+
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ducimus officia aspernatur numquam maxime accusantium quidem, voluptatum itaque quaerat, eaque tempore id at non suscipit recusandae. Quidem nam ullam et!</p>
+  <div class="box-conatiner">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ducimus officia aspernatur numquam maxime accusantium quidem, voluptatum itaque quaerat, eaque tempore id at non suscipit recusandae. Quidem nam ullam et!</p>
+  <div class="box-conatiner2">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div id="my-box">
+    <h2>Transform Element</h2>
+    <p>This box will be transformed using Css3</p>
+  </div>
+</body>
+
+</html>

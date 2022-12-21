@@ -1,0 +1,9 @@
+.blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; }
+fieldset { border: 0 none; }
+select { width: auto; padding: 0; border-image: none; background: none; border-radius: 0; }
+.selectbox { position: relative; width: 200px; z-index: 1; border: 1px solid #999; }
+
+/* 가상선택자로 화살표 만들기 */
+.selectbox:before { content: ""; position: absolute; display: block; border-top: 5px solid #333; border-right: 5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid transparent; top: 50%; right: 15px; margin-top: -2px; }
+.selectbox label { position: absolute; top: 1px; left: 5px; padding: 0.8em 0.5em; color: #f00; z-index: -1; /* z-index를 -1을 준 이유는 IE8에서 label이 클릭되지 않는 것을 방지하기 위함 */ }
+.selectbox select { width: 100%; height: auto; line-height: normal; padding: 0.8em 0.5em; border: 0; opacity: 0; }

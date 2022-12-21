@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/select2.css">
+</head>
+<body>
+    <form action="#">
+        <fieldset class="selectbox">
+            <legend class="blind">색상을 선택하세요</legend>
+            <label for="select1">옵션</label>
+            <select name="select1" id="select1">
+                <option selected>색상</option>
+                <option>red</option>
+                <option>blue</option>
+                <option>green</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+        $(function(){
+            var selectTarget = $(".selectbox > select");
+
+            selectTarget.change(function(){
+                var selectOpt = $(this).children("option:selected").text();
+
+                $(this).siblings("label").text(selectOpt);
+            });
+        });
+    </script>
+</body>
+</html>
