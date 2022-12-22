@@ -103,6 +103,18 @@ $("#js1").click(function(e){
     $(".jsday1").slideToggle(200);
     $(this).toggleClass("open");
 });
+$("#js2").click(function(e){
+    $(".jsday2").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#js3").click(function(e){
+    $(".jsday3").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#js4").click(function(e){
+    $(".jsday4").slideToggle(200);
+    $(this).toggleClass("open");
+});
 
 
 
