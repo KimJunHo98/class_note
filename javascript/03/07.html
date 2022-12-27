@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자</title>
+</head>
+<body>
+    <h1>삼항 연산자</h1>
+
+    <script>
+        // (조건) ? A : B = 조건 ? 참이면 A실행 : 거짓이면 B실행
+        
+        let your = "재밌어요";
+        let study = (your=="재밌어요")? "천재" : "복습";
+
+        document.write(`자바스크립트가 ${your} <h1>${study}</h1>`);
+
+        const price1 = 3000;
+        const price2 = 7000;
+        const price3 = 2000;
+        const total = price1 + price2 + price3;
+
+        const result = (total>10000)? total-10000+"초과" : "굿"
+        document.write(result);
+
+    </script>
+</body>
+</html>

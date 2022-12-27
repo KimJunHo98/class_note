@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자</title>
+</head>
+<body>
+    <h1>논리 연산자</h1>
+
+    <script>
+        // A&&B	: A와 B가 모두 True일 경우에만 True
+        // A||B	: A또는 B가 True일 경우 True
+        // !A	: A가 True이면 False, False이면 True
+
+        let x = (7>6)&&(1>8);
+
+        document.write(`${x}<hr>`);
+
+        let y = (7>6)||(1>8);
+
+        document.write(`${y}<hr>`);
+
+        let z = !(7>6);
+
+        document.write(`${z}`);
+    </script>
+</body>
+</html>

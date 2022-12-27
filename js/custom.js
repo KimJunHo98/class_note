@@ -115,6 +115,18 @@ $("#js4").click(function(e){
     $(".jsday4").slideToggle(200);
     $(this).toggleClass("open");
 });
+$("#js5").click(function(e){
+    $(".jsday5").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#js6").click(function(e){
+    $(".jsday6").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#js7").click(function(e){
+    $(".jsday7").slideToggle(200);
+    $(this).toggleClass("open");
+});
 
 
 
