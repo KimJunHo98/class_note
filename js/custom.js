@@ -127,6 +127,18 @@ $("#js7").click(function(e){
     $(".jsday7").slideToggle(200);
     $(this).toggleClass("open");
 });
+$("#js8").click(function(e){
+    $(".jsday8").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#js9").click(function(e){
+    $(".jsday9").slideToggle(200);
+    $(this).toggleClass("open");
+});
+$("#js10").click(function(e){
+    $(".jsday10").slideToggle(200);
+    $(this).toggleClass("open");
+});
 
 
 
