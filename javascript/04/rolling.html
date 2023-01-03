@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * { margin: 0; padding: 0; }
+        h1 { text-align: center; }
+        #frame { width: 232px; height: 54px; position: relative; margin: 10px auto; border: 1px solid blue; overflow: hidden; }
+        #frame #banner { width: 480px; height: 100%; display: flex; }
+        #frame #banner li { width: 78px; height: 100%; flex: 0 0 80px; margin-right: 1px; background-color: #ccc; font-size: 20px; }
+        #frame #banner li:last-child { margin-right: 0; }
+        ul, li { list-style: none; }
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Rolling slide banner</h1>
+    <div id="frame">
+        <ul id="banner">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <a href="#" class="prev">◀</a>
+    <a href="#" class="next">▶</a>
+    <a href="#" class="ctrl">⏯</a>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        let list = $("#banner");
+        const showNum = 3;
+        const total = list.find("li").length;
+        const liWidth = list.find("li").eq(0).width();
+        const copyObj = list.find("li").clone().addClass("clone"), ctrl = $(".ctrl");
+        list.append(copyObj);
+
+        // 자동 슬라이드
+        function autoPlay(){
+            if(num==total){
+                num = 0; // 0
+                list.css("margin-left", 0);
+            }
+
+            num++; // 0(1)
+            list.stop().animate({"margin-left": -liWidth*num}, 500); // num: 1
+        }
+
+        // next버튼 클릭 시 슬라이드
+        $(".next").on("click", function(e){
+            e.preventDefault();
+            
+            if(num==total){
+                num = 0; // 0
+                list.css("margin-left", 0);
+            }
+            
+            num++; // 0(1)
+            list.stop().animate({"margin-left": -liWidth*num}, 500); // num: 1
+        });
+        
+        // prev버튼 클릭 시 슬라이드
+        $(".prev").on("click", function(e){
+            e.preventDefault();
+
+            if(num==0){
+                num = total;
+                list.css("margin-left", -liWidth*num);
+            }
+
+            num--;
+            list.stop().animate({"margin-left": -liWidth*num}, 500);
+        });
+
+        let num = 0;
+        timer = setInterval(autoPlay, 2000);
+        clearInterval(timer);
+        
+        ctrl.click(function(){
+            if(ctrl.text()==="stop"){
+                ctrl.text("play");
+                clearInterval(timer);
+            }else{
+                ctrl.text("stop");
+                setInterval(autoPlay, 2000);
+            }
+            console.log(ctrl.text()==="stop");
+        });
+    </script>
+</body>
+</html>

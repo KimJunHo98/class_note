@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택문</title>
+</head>
+<body>
+    <h1>switch</h1>
+
+    <script>
+        // let day = "월";
+        
+        // document.write(day+"요일에는");
+
+        // switch(day){
+        //     case "월"  : document.write("오전 10시에 수업 시작");
+        //     break
+            
+        //     case "화" : document.write("오후 2시에 수업 시작");
+        //     break
+            
+        //     case "수" : document.write("오전 10시에 수업 시작");
+        //     break
+            
+        //     case "목"  : document.write("오후 2시에 수업 시작");
+        //     break
+            
+        //     case "금" : document.write("오전 11시에 수업 시작");
+        //     break
+            
+        //     default: document.write("월요일에서 금요일까지만 입력하세요");
+        // }
+
+        const input = Number(prompt("숫자를 입력하세요", "숫자"));
+
+        switch(input%2){
+            case 1: document.write("홀수");
+            break
+            
+            case 0: document.write("짝수");
+            break
+
+            default: document.write("숫자만 입력하세요");
+        }
+    </script>
+</body>
+</html>

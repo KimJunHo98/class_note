@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+    <button onclick="colorBg()">change</button>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        const color = ["yellow","red","blue","pink","orange"];
+        let i = 0;
+        
+        function colorBg(){
+            let bodyTag = document.getElementsByTagName("body")[0];
+
+            bodyTag.style.backgroundColor = color[i];
+            i++;
+            console.log(i);
+            
+            if(i>=color.length){
+                i = 0;
+
+                color.splice(1,1);
+                color.splice(color.length,0,"lightgreen");
+            }
+        };
+    </script>
+</body>
+</html>

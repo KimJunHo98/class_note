@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>retrun</h1>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // 변수의 유효범위(scope)는 함수 내에서 선언하면 밖으로 꺼내지 못함
+        let total = ""; // 전역변수
+        let sum = (a,b)=>{
+            // let total = a+b; // 지역변수
+            total = a+b; // 재할당
+        };
+        sum(10,20);
+        document.write("두수의 합"+total);
+
+        let sum1 = (a,b)=>{
+            return a+b; //return의 역할: 값을 함수 밖으로 전달 
+        };
+        document.write("<hr>두수의 합"+sum1(10,20));
+
+        (function(){
+            document.write("<hr>hello")
+        })();
+    </script>
+</body>
+</html>

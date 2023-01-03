@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let height = prompt("당신의 신장은?", "0");
+        let weight = prompt("당신의 체중은?", "0");
+        let bmi = (height-100)*0.9;
+
+        let result = weight>bmi? "적정 몸무게 이상" : "적정 몸무게 미달"; 
+        document.write(result);
+    </script>
+</body>
+</html>

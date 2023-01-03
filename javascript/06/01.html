@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체와 함수</title>
+</head>
+<body>
+    <h1>객체</h1>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // 객체 생성
+        var dog = new Object();
+        dog = {
+            // 이름(키): "값"(value);
+            name: "망고",
+            features: "말티즈"
+        };
+        document.write(`<h1>이름은${dog.name}입니다</h1>`);
+
+        // = [] :배열
+        // = {} :객체
+
+        const baby = {
+            name: "바나나",
+            features: "푸들"
+        }
+        document.write(`<h1>이름은 ${baby.name}이고 종은 ${baby.features}입니다</h1>`);
+
+        // 메서드(method)
+        const pet = {
+            // 객체 안에서 this는 객체를 가르킴
+            name: "망고",
+            eat: function(food){
+                document.write(`<h1>이름은 ${this.name}이고 종은 ${baby.features}입니다 음식은 ${food}를 먹습니다</h1>`);
+            }
+        }
+        pet.eat("사료");
+        pet.eat("닭가슴살");
+    </script>
+</body>
+</html>

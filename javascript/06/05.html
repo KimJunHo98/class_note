@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체와 함수</title>
+</head>
+<body>
+    <h1>즉시실행함수</h1>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // (function(){}());
+        // 매개변수가 없을 떄
+        (function(){
+            document.write("abc<br>")
+        }());
+
+        // 매개변수가 있을 때
+        (function(x,y){
+            let z=x+y
+            document.write(`<h1>${x}+${y}=${z}</h1>`)
+        }(10,20));
+    </script>
+</body>
+</html>

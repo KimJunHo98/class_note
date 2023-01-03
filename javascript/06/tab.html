@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+
+    <style>
+        * { box-sizing: border-box; -webkit-font-smoothing: antialised; }
+        .tab_wrapper { width: 960px; margin: 0 auto; }
+        .tab_menu { padding-left: 0; display: flex; }
+        .tab_menu li { list-style: none; background-color: #ebebeb; margin-right: 10px; }
+        .tab_menu li a { height: 27px; text-decoration: none; color: #999; line-height: 27px; display: block; }
+        .tab_menu li a.active { background-color: #000; color: #fff; }
+        .tab_content { position: relative; min-height: 300px; }
+        .tab_content > div { position: absolute; top: 0; left: 0; display: none; }
+    </style>
+</head>
+<body>
+    <div class="tab_wrapper">
+        <ul class="tab_menu">
+            <li><a href="#tabs_1">리미</a></li>
+            <li><a href="#tabs_2">감자</a></li>
+            <li><a href="#tabs_3">치킨</a></li>
+        </ul>
+        <div class="tab_content">
+            <div id="tabs_1">
+                <h2>리미</h2>
+                <p>
+                    I like 치킨 (치킨시켜) Everybody likes 치킨 (치킨시켜) Let`s eat 치킨 (치킨시켜) 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요 아줌마 고도비만 치킨 알이 꽉 찬
+                    치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마
+                </p>
+            </div>
+            <div id="tabs_2">
+                <h2>감자</h2>
+                <p>
+                    Edge 있게 물티슈, (아줌마) 콜란 서비스 (아줌마) 할인카드... 되죠? (아줌마) 어저께도 거기 (아줌마) 시켰는데 쿠폰 두개 (아줌마) 감사하죠 콜라는 다이어트 중이니까 다이어트 콜라 염통튀김도 몇 개 되요? 원 플러스 원 곱빼기도 되요? 옆 테이블 남는 거 싸가도 되요? 이거 다 타 매장쿠폰
+                        계산 되죠? I like 치킨 (치킨시켜) Everybody likes 치킨 (치킨시켜) Let`s eat 치킨 (치킨시켜) 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2
+                </p>
+            </div>
+            <div id="tabs_3">
+                <h2>치킨</h2>
+                <p>
+                    후라이드 좋다던 첫사랑 그녀 근데 네 옷에 묻어있던 양념 1000원 더 비싸서 양념을 못 사준 내 탓 이 악물고서 나도 성공을 했다 붉은 빛깔 그녀의 입술 같아서 쿠킹호일도 다 핥아먹어 날 떠난 이윤 지독한 가난이라서 양념 밖에는 난 안 먹어 후라이드 좋아한다고 말해야 했지 어떤 날엔 화내야
+                    했지 (오빠가 돈이 어디 있다고 양념을 사줘) 우린 데이트하면 후라이드 우리가 매일 먹고 또 먹던 후라이드 근데 오빠 나도 속물 인가봐 양념이라면 눈이 돌아갔지 양념이 오빠의 피 같아 지금은 후라이드 밖에 못 삼켜 난 양념치킨이 더 좋아 양념을 먹어봐 넌 건강해지고 양념을 먹어봐 넌 머리
+                    좋아져 양념을 먹어봐 넌 웃을 수 있고 양념을 먹어봐 넌 시험 합격해
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab_wrapper">
+        <ul class="tab_menu">
+            <li><a href="#tabs_4">리미</a></li>
+            <li><a href="#tabs_5">감자</a></li>
+            <li><a href="#tabs_6">치킨</a></li>
+        </ul>
+        <div class="tab_content">
+            <div id="tabs_4">
+                <h2>리미</h2>
+                <p>
+                    I like 치킨 (치킨시켜) Everybody likes 치킨 (치킨시켜) Let`s eat 치킨 (치킨시켜) 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요 아줌마 고도비만 치킨 알이 꽉 찬
+                    치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마
+                </p>
+            </div>
+            <div id="tabs_5">
+                <h2>감자</h2>
+                <p>
+                    Edge 있게 물티슈, (아줌마) 콜란 서비스 (아줌마) 할인카드... 되죠? (아줌마) 어저께도 거기 (아줌마) 시켰는데 쿠폰 두개 (아줌마) 감사하죠 콜라는 다이어트 중이니까 다이어트 콜라 염통튀김도 몇 개 되요? 원 플러스 원 곱빼기도 되요? 옆 테이블 남는 거 싸가도 되요? 이거 다 타 매장쿠폰
+                        계산 되죠? I like 치킨 (치킨시켜) Everybody likes 치킨 (치킨시켜) Let`s eat 치킨 (치킨시켜) 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2
+                </p>
+            </div>
+            <div id="tabs_6">
+                <h2>치킨</h2>
+                <p>
+                    후라이드 좋다던 첫사랑 그녀 근데 네 옷에 묻어있던 양념 1000원 더 비싸서 양념을 못 사준 내 탓 이 악물고서 나도 성공을 했다 붉은 빛깔 그녀의 입술 같아서 쿠킹호일도 다 핥아먹어 날 떠난 이윤 지독한 가난이라서 양념 밖에는 난 안 먹어 후라이드 좋아한다고 말해야 했지 어떤 날엔 화내야
+                    했지 (오빠가 돈이 어디 있다고 양념을 사줘) 우린 데이트하면 후라이드 우리가 매일 먹고 또 먹던 후라이드 근데 오빠 나도 속물 인가봐 양념이라면 눈이 돌아갔지 양념이 오빠의 피 같아 지금은 후라이드 밖에 못 삼켜 난 양념치킨이 더 좋아 양념을 먹어봐 넌 건강해지고 양념을 먹어봐 넌 머리
+                    좋아져 양념을 먹어봐 넌 웃을 수 있고 양념을 먹어봐 넌 시험 합격해
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab_wrapper">
+        <ul class="tab_menu">
+            <li><a href="#tabs_7">리미</a></li>
+            <li><a href="#tabs_8">감자</a></li>
+            <li><a href="#tabs_9">치킨</a></li>
+        </ul>
+        <div class="tab_content">
+            <div id="tabs_7">
+                <h2>리미</h2>
+                <p>
+                    I like 치킨 (치킨시켜) Everybody likes 치킨 (치킨시켜) Let`s eat 치킨 (치킨시켜) 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요 아줌마 고도비만 치킨 알이 꽉 찬
+                    치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마
+                </p>
+            </div>
+            <div id="tabs_8">
+                <h2>감자</h2>
+                <p>
+                    Edge 있게 물티슈, (아줌마) 콜란 서비스 (아줌마) 할인카드... 되죠? (아줌마) 어저께도 거기 (아줌마) 시켰는데 쿠폰 두개 (아줌마) 감사하죠 콜라는 다이어트 중이니까 다이어트 콜라 염통튀김도 몇 개 되요? 원 플러스 원 곱빼기도 되요? 옆 테이블 남는 거 싸가도 되요? 이거 다 타 매장쿠폰
+                        계산 되죠? I like 치킨 (치킨시켜) Everybody likes 치킨 (치킨시켜) Let`s eat 치킨 (치킨시켜) 양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2
+                </p>
+            </div>
+            <div id="tabs_9">
+                <h2>치킨</h2>
+                <p>
+                    후라이드 좋다던 첫사랑 그녀 근데 네 옷에 묻어있던 양념 1000원 더 비싸서 양념을 못 사준 내 탓 이 악물고서 나도 성공을 했다 붉은 빛깔 그녀의 입술 같아서 쿠킹호일도 다 핥아먹어 날 떠난 이윤 지독한 가난이라서 양념 밖에는 난 안 먹어 후라이드 좋아한다고 말해야 했지 어떤 날엔 화내야
+                    했지 (오빠가 돈이 어디 있다고 양념을 사줘) 우린 데이트하면 후라이드 우리가 매일 먹고 또 먹던 후라이드 근데 오빠 나도 속물 인가봐 양념이라면 눈이 돌아갔지 양념이 오빠의 피 같아 지금은 후라이드 밖에 못 삼켜 난 양념치킨이 더 좋아 양념을 먹어봐 넌 건강해지고 양념을 먹어봐 넌 머리
+                    좋아져 양념을 먹어봐 넌 웃을 수 있고 양념을 먹어봐 넌 시험 합격해
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // tab_wrapper 버튼과 패널의 부모
+        // tab_menu 버튼 그룹: a요소
+        // tab_content 패널그룹: 요소
+
+        // var menus = $(".tab_menu li a"); 
+        // var panels = $(".tab_content > div"); 
+
+        // menus.eq(0).addClass("active");
+        // panels.eq(0).show();
+
+        // menus.click(function(e){
+        //     e.preventDefault();
+        //     let tg = $(this);
+        //     let currentLink = tg.attr("href");
+            
+        //     menus.removeClass("active");
+        //     tg.addClass("active");
+        //     $(currentLink).show().siblings().hide();
+        // });
+
+        var wrap = $(".tab_wrapper");
+
+        wrap.each(function(){
+            var currentEl = $(this);
+            var menus = currentEl.find(".tab_menu li a"); 
+            var panels = currentEl.find(".tab_content > div"); 
+
+            menus.eq(0).addClass("active");
+            panels.eq(0).show();
+    
+            menus.click(function(e){
+                e.preventDefault();
+                let tg = $(this);
+                let currentLink = tg.attr("href");
+                
+                menus.removeClass("active");
+                tg.addClass("active");
+                $(currentLink).show().siblings().hide();
+            });
+        });
+
+    </script>
+</body>
+</html>

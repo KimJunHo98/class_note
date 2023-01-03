@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break</title>
+</head>
+<body>
+    <h1>break문</h1>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        for(let i=0; true; i++){
+            // 무한 반복
+            alert(i+"번째 반복");
+            
+            const isContinue = confirm("계속 하시겠습니까?");
+
+            if(!isContinue){
+                break; // 중지
+                // continue 통과
+            }
+        }
+        document.write("반복문 종료");
+    </script>
+</body>
+</html>

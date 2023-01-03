@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+    <h1>콜백함수</h1>
+    <p>-함수가 다른 함수를 호출하는 것</p>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // const test = function(a){
+        //     // console.log(a);
+        //     a()
+        // };
+
+        // const fn = function(){
+        //     document.write(`<h1>자바스크립트에서 매개 변수를 함수로 전달받는 것이 콜백함수이다</h1>`);
+        // };
+        // test(fn);
+        // // 다른 자료형을 전달시 오류가 발생
+
+        // const test2 = function(콜백함수){
+        //     콜백함수(10)
+        // };
+        // const fn2 = function(콜백함수_매개변수){
+        //     document.write(`${콜백함수_매개변수}번째<br>`);
+        // };
+        // test2(fn2) // 10번째
+    
+        // const test = function(callback){
+        //     for(let i=0; i<5; i++){
+        //         callback(i);
+        //     }
+        // };
+        // const fn = function(callback_fn){
+        //     document.write(`<h1>${callback_fn}번째 입니다</h1>`);
+        // };
+        // test(fn) // 0번쨰, 1번쨰, 2번쨰, 3번째, 4번쨰
+
+        const test = function(arr, callback){
+            for(const 값 of arr){
+                callback(값)
+            };
+        };
+        const fn = function(콜백매개변수){
+            document.write(`${콜백매개변수}번째`)
+        };
+        test([52,249,226,72,3],fn) // 52번쨰, 249번째, 226번째, 72번째, 3번쨰
+    </script>
+</body>
+</html>

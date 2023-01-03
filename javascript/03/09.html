@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <h1>if</h1>
+
+    <script>
+        // const h1 = document.querySelector("h1");
+
+        // h1.style.color="red";
+        // h1.style.backgroundColor="yellow";
+        // h1.onclick=function(){
+        //     h1.style.backgroundColor="lightgreen";
+        // };
+
+        // var yourSex = "여자";
+
+        // document.write("당신은"+yourSex+"이므로");
+        // if(yourSex=="남자"){
+        //     document.write("반바지를 입으세요");
+        // }else{
+        //     document.write("긴바지를 입으세요");
+        // }
+
+        let current = new Date();
+        let dayTime = current.getHours();
+
+        if(dayTime<18){
+            document.write(`<img src='day.gif' style='display: block; margin: 0 auto;'`);
+        }else{
+            document.write(`<img src='night.gif' style='display: block; margin: 0 auto;'`);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체와 함수</title>
+</head>
+<body>
+    <h1>화살표함수</h1>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // 익명함수를 줄여서 쓸 때 사용
+        // ()=>{}
+
+        // let hi = function(){
+        //     return "안녕";
+        // };
+
+        // let hi = ()=>{
+        //     return "안녕";
+        // };
+
+        let hi = ()=> "안녕"; // 실행문이 한 줄일 때만 가능
+        alert(hi());
+
+        // 인자가 있는 화살표 함수
+        // let sum1 = (a,b)=>{
+        //     return a+b
+        // };
+
+        let sum1 = (a,b)=> a+b; // 실행문이 한 줄일 때만 가능
+        document.write("두수의 합"+sum1(10,20));
+    </script>
+</body>
+</html>
