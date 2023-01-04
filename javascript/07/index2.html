@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭이벤트</title>
+</head>
+<body>
+    <button id="change">color</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste impedit ex distinctio? Quasi fugit tempore at rerum dolorem ratione hic voluptate dignissimos, consequatur quia eligendi nobis aliquam alias nam reiciendis?</p>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">green</a></li>
+        <li><a href="#" onclick="changeBg('orange')">orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')">purple</a></li>
+    </ul>
+
+    <script>
+        // 글씨 색상 변경
+        // 방법1: 변수 지정 후 함수호출
+        // var changeBtn = document.querySelector("#change");
+        // 이벤트 핸들러로 함수 호출 시 () 안씀
+        // changeBtn.onclick = changeColor;
+
+        // function changeColor(){
+        //    document.querySelector("p").style.color = "#f00";
+        // }
+
+        // 방법2: 바로 변경
+        // document.querySelector("#change").onclick = changeColor;
+        // function changeColor(){
+        //     document.querySelector("p").style.color = "#f00";
+        // }
+
+        // 방법3: 직접 함수 선언
+        document.querySelector("#change").onclick = function(){
+            document.querySelector("p").style.color = "#f00";
+        };
+
+        // 배경색상 변경
+        function changeBg(color){
+            var result = document.querySelector("body");
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
