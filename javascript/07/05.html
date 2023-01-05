@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>초록색</p>
+    <p class="blue">파란색</p>
+
+    <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <!--<script>
+        $("p").css("color","green");
+        $("p.blue").css("color","blue");
+    </script>-->
+    <script>
+        document.querySelector("p").style.color= "green";
+        document.querySelector("p.blue").style.color= "blue";
+    </script>
+</body>
+</html>
