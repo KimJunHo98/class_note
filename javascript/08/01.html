@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 조작</title>
+  <style>
+    .a0 {
+      background: yellow;
+    }
+
+    .a1 {
+      background: red;
+    }
+
+    .a2 {
+      background: blue;
+    }
+
+    .a3 {
+      background: pink;
+    }
+
+    .a4 {
+      background: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 html조작</h1>
+        <h2>탐색 선택자</h2>
+        <ul id="list1">
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+            <li>리스트6</li>
+            <li>리스트7</li>
+        </ul>
+        <ul id="list2">
+            <li>리스트8</li>
+            <li class="theObj">리스트9</li>
+            <li><span>리스트10</span></li>
+            <li>리스트11</li>
+            <li><a href="#">리스트12</a></li>
+            <li>리스트13</li>
+            <li>리스트14</li>
+        </ul>
+        <h2 class="theTitle">html 조작</h2>
+        <ul id="list3">
+            <li class="obj1">list_2</li>
+            <li>list_3</li>
+            <li>list_4</li>
+            <li>list_5</li>
+        </ul>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script>
+        // js
+        // let list1 = document.querySelectorAll("#list1 > li");
+        // list1.forEach(function(el,i){
+        //     el.textContent = "aaa"+i;
+        //     el.classList.add("a"+i);
+        //     //클래스값, tag, 함수 
+        // });
+
+        // let list2 = document.querySelector(".theObj");
+        // list2.innerHTML = "<span>"+Math.random()+"</span>";
+        // list2.setAttribute("data-role","accessbillity");
+        // let list22 = list2.getAttribute("class");
+        // console.log(list22);
+        // list2.nextElementSibling.textContent = list22;
+
+        // let list3 = document.querySelector("#list3");
+        // list3.innerHTML+="<li>추가한 list6💨</li>";
+        // list3.insertAdjacentHTML("beforebegin","<li>바로 앞에</li>");
+        // list3.insertAdjacentHTML("afterbegin","<li>내부에서 첫번째</li>");
+        // list3.insertAdjacentHTML("beforeend","<li>내부에서 가장 막내</li>");
+        // list3.insertAdjacentHTML("afterend","<li>바로 뒤에</li>");
+
+        // let list3Li = document.querySelectorAll("#list3 > li");
+        // list3Li[4].insertAdjacentHTML("beforebegin","<li>🔴🟠🟡🟢🔵🟣</li>");
+
+        // jq
+        let list1 = $("#list1 > li");
+        
+        list1.each(function(i,el){
+            $(el).addClass("a"+i).text("aaa"+i);
+            console.log(el,i);
+        });
+
+        let list2 = $(".theObj");
+        list2.attr("data-role","accessbillity");
+        list2.attr("class","abcd");
+        let list22 = list2.attr("class");
+        // $("ele").text/html(): 가져와
+        // $("ele").text/html("") : 비워
+        // $("ele").text/html("","") : 바꿔
+        console.log(list22);
+        list2.next().text(list22);
+        list2.html("<span>"+list22+"</span>");
+
+        let list3 = $("#list3");
+        list3.before("<li>바로 앞에</li>");
+        list3.prepend("<li>내부에서 첫번째</li>");
+        list3.append("<li>내부에서 가장 막내</li>");
+        list3.after("<li>바로 뒤에</li>");
+        let list33 = $("#list3 li");
+        list33.eq(4).before("<li>🔴🟠🟡🟢🔵🟣</li>")
+    </script>
+</body>
+</html>

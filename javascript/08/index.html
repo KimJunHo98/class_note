@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cursor_sec { width: 100%; height: 150vh; cursor: default; }
+
+        #m1, #m3 { width: 100px; height: 100px; position: absolute; top: 50px; left: 30px; transition: all .05s ease-in; }
+        #m3 { animation: rotate 2.5s infinite alternate; /* animation-play-state: paused; */ }
+        @keyframes rotate {
+            0% { transform: perspective(200px) rotateY(0); }
+            50% { transform: perspective(200px) rotateY(180deg); }
+            100% { transform: perspective(200px) rotateY(360deg); }
+        }
+        #m3.on { width: 300px; height: 300px; transition: all .2s ease-in; }
+        #cursor { 
+            width: 100px; height: 100px; position: absolute; z-index: 99999999999; background-color: #d2b6ff; 
+            border-radius: 50%; opacity: 0.5; user-select: none; pointer-events: none; 
+        }
+    </style>
+</head>
+<body>
+    <section class="cursor_sec">
+        <div id="m1"><img src="img/1.png" alt=""></div>
+        <div id="m2"><img src="img/2.png" alt=""></div>
+        <div id="m3"><img src="img/3.png" alt=""></div>
+        <div id="cursor"></div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, voluptate temporibus. Velit culpa reiciendis voluptates, labore facilis quod et eum. Perspiciatis sed nemo illum quidem cum iure dolores ad possimus!</p>
+    </section>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script src="js/mouse-js.js"></script> 
+    <!--<script src="js/mouse-jq.js"></script>-->
+</body>
+</html>

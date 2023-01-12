@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getComputedStyle</title>
+    <style>
+        .container { width: 500px; height: 500px; background-color: #ff9f9f; }
+        .child { width: 50px; height: 50px; background-color: #a1ff94; padding-left: 20px; }
+        .child::before { content: "👻"; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child"></div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script src="js/getComputedStyle.js"></script>
+</body>
+</html>
