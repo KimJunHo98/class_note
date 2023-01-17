@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div{padding:30px; width:20%; color:white;}
+        .one{background:red;}
+        .two{background:green;}
+        .three{background:blue;}
+    </style>
+</head>
+<body>
+    <div class="one"> 
+        <span>one</span>
+		<div class="two"> 
+            <span>two</span>
+            <div class="three"> 
+                <span>three</span>
+            </div>
+		</div>
+	</div>
+
+    <script>
+        /* 
+            이벤트 버블링: 이벤트가 상위 요소로 전파 
+            이벤트 캡쳐링: 이벤트가 하위 요소로 전파 
+        */
+        var divs = document.querySelectorAll("div");
+
+        divs.forEach(function(div) {
+            div.addEventListener("click", logEvent, {capture: true});
+        });
+        function logEvent(e){
+            console.log(e.currentTarget.className); // event.currentTarget: 이벤트를 등록해 놓은 요소를 반환
+            // console.log(e.target); // event.target: 이벤트가 발생한 요소를 반환
+        };
+    </script>
+</body>
+</html>
