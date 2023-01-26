@@ -1,8 +1,10 @@
-addEventListener("DOMContentLoaded", ()=>{
+window.addEventListener("DOMContentLoaded", ()=>{
     const book1 = document.querySelector("#book1"),
-        book2 = document.querySelector("#book2");
+        book2 = document.querySelector("#book2"),
+        news1 = document.querySelector("#newsWrap_1"),
+        news2 = document.querySelector("#newsWrap_2");
     
-    const url = "./01-1.html",
+    const url = "./01.html",
         request = new XMLHttpRequest();
 
     request.open("GET", url);
@@ -12,6 +14,8 @@ addEventListener("DOMContentLoaded", ()=>{
         const response = request.response,
             ids = response.querySelectorAll("[id]");
 
+        news1.innerHTML = ids[0].innerHTML;
+        news2.innerHTML = ids[1].innerHTML;
         book1.innerHTML = ids[0].innerHTML;
         book2.innerHTML = ids[1].innerHTML;
     };
