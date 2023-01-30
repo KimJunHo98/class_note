@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* css변수 */
+:root {
+    --red: #ff0000;
+    --blue: #1e00ff;
+    --green: #00ff66;
+}
+// scss 변수
+$red: #fc6868;
+$blue: #657cff;
+$green: #65fca1;
+$bg: #ffea8c;
+$px: 30px;
+
+html {
+    font-size: 18px;
+}
+body {
+    margin: calc($px*5);
+    background-color: $bg;
+}
+div {
+    color: #333;
+    padding: 20px;
+}
+a {
+    display: inline-block;
+    margin: 10px 0;
+}
+#box1 {
+    font-size: 40px;
+    background-color: #ffcccc;
+    border-radius: 20px;
+    border: 3px solid #f00;
+    -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+}
+#box1 #box1-title {
+    color: $blue;
+    background: linear-gradient($green, $red);
+}
+#box1 > a {
+    color: #a22;
+    text-decoration: none;
+}
+#box1 > a:hover {
+    background-color: #ccc;
+}
+#box1 #box2 {
+    font-size: 20px;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    border: 3px solid #f00;
+    -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+}
+#box1 #box2 > a {
+    color: #ee6633;
+    text-decoration: none;
+}
+#box1 #box2 > a:hover {
+    color: #a22;
+    text-decoration: none;
+}
