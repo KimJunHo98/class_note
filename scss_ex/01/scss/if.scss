@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@mixin textAndBgColor($textColor, $bgColor){
+    color: $textColor;
+    background-color: $bgColor;
+}
+@mixin theme($mood){
+    @if $mood == light{
+        @include textAndBgColor(#333, #eee);
+    }@else if $mood == dark{
+        @include textAndBgColor(#eee, #333);
+    }@else{
+        @include textAndBgColor(lightblue, lightpink);
+    }
+}
+
+body { margin: 50px; }
+div { padding: 10px; }
+
+#box1 {
+    @include theme(light);
+}
+#box2 {
+    @include theme(dark);
+}
+#box3 {
+    @include theme(anything);
+}

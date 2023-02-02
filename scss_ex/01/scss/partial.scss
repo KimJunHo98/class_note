@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+// 확장자가 같은 경우 .확장자 이름을 적지 않음, scss의 파일이름 앞에 _도 적지 않음
+/* _base.scss */
+@import "base/base"; 
+/* _mixin.scss */
+@import "mixin"; 
+/* _extend.scss */
+@import "partial/extend"; 
+
+#test {
+    @include fontSizeBgColor($px, #fff);
+    @include colorTdN(#f00, none);
+    @extend %boxShape;
+}
