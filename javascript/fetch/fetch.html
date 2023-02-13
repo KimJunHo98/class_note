@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            fetch: javascript의 비동기 처리를 지원하는 객체 중 하나
+
+            Promise 객체는 then과 catch 메서드를 가지고 있다.
+            - then (콜백) 는 통신성공시 결과값 반환
+            - catch (콜백) 는 통신에러시 결과값 반환
+
+            fetch(resource)
+            fetch(resource, options)
+        */
+
+        /*
+            fetch 
+            1. XMLhttprequst를 간편하게 사용할 수 있게 해줌
+            2. promise 객체를 반환한다.
+            3. peomise는 then, catch를 반환
+            4. promise 객체를 새로 생성시에는 callback.html처럼 작성
+        */
+
+        // let fetched = fetch("https://jsonplaceholder.typicode.co");
+
+        // fetched.then((response)=>{
+        //     let data = response.json();
+
+        //     data.then((d)=>{
+        //         console.log(d);
+        //     });
+        // }) // then (콜백) 는 통신성공시 결과값 반환
+
+        // fetched.catch((reason)=>{
+        //     console.log(reason);
+        // }) // catch (콜백) 는 통신에러시 결과값 반환
+
+        // 아래와 같이 합쳐서 사용할 수 있음
+        fetch("https://jsonplaceholder.typicode.com/photos").then((response)=>{
+            return response.json();
+        }).then((data)=>{
+            console.log("data", data); //여기 작성된 코드는 비동기 처리가 완료된 후 동작합니다.
+        }).catch((error)=>{
+            console.log("error", error); //여기 작성된 코드는 비동기 처리가 완료됐으나 에러가 발생했을 때 동작합니다.
+        })
+
+    </script>
+</body>
+</html>

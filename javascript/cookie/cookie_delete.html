@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키삭제</title>
+</head>
+<body>
+    <button id="delCookie">쿠키삭제</button>
+
+    <script>
+        let date = new Date();
+        console.log(document.cookie); //쿠키존재확인
+
+        function delCookie(){
+            let setCookie = '';
+
+            date.setDate(date.getDate()-1); //만기일을 오늘 이전으로 지정하여 삭제
+            setCookie += 'MangoWeb=popupCookie;';
+            setCookie += 'Expires='+date.toUTCString();
+            document.cookie = setCookie;
+        }
+
+        document.querySelector('#delCookie').addEventListener('click', function(){ 
+            delCookie();
+            alert('쿠키삭제됨'); //브라우저에서 새로고침해서 확인
+        })
+    </script>
+</body>
+</html>

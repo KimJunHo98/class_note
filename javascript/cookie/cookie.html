@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키</title>
+    <style>
+        .popup { position: fixed; top: 100px; left: 100px; border: 1px solid #000; padding: 40px 60px; /* display: none; */ }
+    </style>
+</head>
+<body>
+    <h1>내용</h1>
+    <div class="popup">
+        <h2>팝업</h2>
+        <input type="checkbox" id="popup">
+        <label for="popup">오늘 하루 안 보기</label>
+        <button class="close">창닫기</button>
+    </div>
+    <!-- 
+        쿠키 있으면 재방문 -> 팝업 안열기 
+        쿠키 없으면 방문 -> 팝업 열기
+    -->
+
+    <script>
+        /*
+            document.cookie = "Name= 값; Value =값; Expires = 값"
+            날짜를 가져오는것 date.getDate()날짜//getHours()시간,getMinutes()분.,getMonth()+1월...
+            날짜 지정 date.setDate(새로운 날짜)
+        */
+        // 쿠키 생성
+        const myPop = document.querySelector(".popup"),
+            checkBox = document.querySelector("#popup"),
+            close = document.querySelector(".close");
+        let visited = false; // 방문여부 체크변수
+
+        function setCookie(name, Value, day){
+            let date = new Date();//날짜초기화
+            let setCookie = '';
+            
+            date.setDate(date.getDate()+day); //정보를 파기할 날짜지정 7일동안 유지
+            setCookie += name+"="+Value+";";
+            setCookie += 'Expires='+date.toUTCString(); //쿠키만기일지정  toUTCString 으로 변환
+            document.cookie = setCookie; //쿠키 설정, 생성
+        }
+
+        // 쿠키 삭제
+        // document.cookie = "Name=Value; Expires = 값"
+        function delCookie(name) {
+            let date = new Date();
+            let setCookie = '';
+
+            date.setDate(date.getDate()-1); //만기일을 오늘 이전으로 지정하여 삭제
+            setCookie += name+"=popup01;";
+            setCookie += 'Expires='+date.toUTCString();
+            document.cookie = setCookie;
+        }
+
+        // 체크
+        function checkCookie(name){
+            let cookies = document.cookie.split(";");
+
+            // 브라우저에 저장된 여러개의 쿠키중에서 name 변수와 일치하는 값을 검색
+            for(let i in cookies){
+                if(cookies[i].indexOf(name)>-1){
+                    // 방문 했던 사람
+                    visited = true;
+                }
+            }
+            if(visited){
+                myPop.style.display = "none";
+            }else{
+                myPop.style.display = "block";
+            }
+            console.log(cookies, visited);
+        }
+        checkCookie("MangoWeb");
+        close.addEventListener("click", function(){
+
+            if(checkBox.checked){
+                // 오늘 하루 안보기
+                setCookie("MangoWeb", "popup01", 1); // setCookie(쿠키명, 쿠키값, 파기일)
+                myPop.style.display = "none";
+            }else{
+                myPop.style.display = "none";
+                delCookie("MangoWeb");
+            }
+        })
+
+    </script>
+</body>
+</html>

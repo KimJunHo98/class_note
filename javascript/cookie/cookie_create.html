@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키생성</title>
+</head>
+<body>
+    
+    <script>
+        //오늘 날짜를 변수에 저장하고 파기일을 7일후로 지정
+        //.getDate() 날짜취득 
+        //.setDate() 날짜설정
+        //console.log(date.getHours(),date.getMinutes());
+
+        let date = new Date();//날짜초기화
+
+        date.setDate(date.getDate()+7); //정보를 파기할 날짜지정 7일동안 유지
+
+        //쿠키지정변수
+        let setCookie = '';
+
+        setCookie += 'MangoWeb=popupCookie;';
+        setCookie += 'Expires='+date.toUTCString(); //쿠키만기일지정  toUTCString 으로 변환
+        document.cookie = setCookie; //쿠키 설정, 생성
+    </script>
+</body>
+</html>
