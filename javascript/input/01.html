@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 요소 얻어오기</title>
+</head>
+<body>
+    <h1>form 요소값 얻어오기</h1>
+    <input type="text" id="myText">
+    <div class="log"></div>
+
+    <script>
+        const element = document.getElementById("myText");
+        
+        function handleChange(e){
+            const log = document.querySelector(".log"),
+                value = element.value;
+            
+            log.innerHTML = value;
+            console.log(value);
+        }
+        element.addEventListener("input", handleChange);
+    </script>
+</body>
+</html>

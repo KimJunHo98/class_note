@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+</head>
+<body>
+    <h1>form 요소값 얻어오기</h1>
+    <textarea id="myText">부재시 문 앞에 놔주세요</textarea>
+    <div class="log"></div>
+
+    <script>
+        const ele = document.querySelector("#myText");
+
+        function fn(e){
+            const val = e.target.value,
+                log = document.querySelector(".log"),
+                // 줄바꿈: \n(공통 표현방식)
+                htmlStr = val.split("\n").join("<br>");
+
+            log.innerHTML = htmlStr;
+        }
+        ele.addEventListener("input", fn);
+    </script>
+</body>
+</html>

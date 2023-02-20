@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isotope</title>
+    <link rel="stylesheet" href="css/iso.css">
+</head>
+<body>
+    <div id="option">
+        <div class="option-set" data-isotope-key="filter">
+            <button data-isotope-value="*">All</button>
+            <button data-isotope-value=".metal">metal</button>
+            <button data-isotope-value=".food">food</button>
+        </div>
+    </div>
+    <div id="container" class="grid">
+        <div class="element-item elem metal">metal</div>
+        <div class="element-item elem metal">metal</div>
+        <div class="element-item elem">elem</div>
+        <div class="element-item elem food">food</div>
+        <div class="element-item elem">elem</div>
+        <div class="element-item elem food">food</div>
+        <div class="element-item elem metal">metal</div>
+        <div class="element-item elem metal">metal</div>
+        <div class="element-item elem food">food</div>
+    </div>
+
+    <!-- script -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        const grid = document.querySelector("#container"),
+            // Isotope(대상, {할일})
+            iso = new Isotope(grid, { 
+                // 조회할 데이터 요소
+                itemSelector: ".elem",
+                layoutMode: "fitRows",
+            }),
+            opt = document.querySelector("#option");
+
+        opt.addEventListener("click", function(e){
+            let key = e.target.parentNode.getAttribute("data-isotope-key"),
+                value = e.target.getAttribute("data-isotope-value");
+            
+            // 필터링 할 문자열을 취득
+            iso.options[key] = value;
+            iso.arrange();
+        })
+    </script>
+</body>
+</html>

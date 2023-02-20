@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<body>
+    <select id="mySelect">
+        <option value="apple">apple</option>
+        <option value="banana">banana</option>
+        <option value="orange" selected>orange</option>
+    </select>
+    <p class="log"></p>
+
+    <script>
+        const el = document.getElementById("mySelect"),
+            log = document.querySelector(".log");
+        
+        let val = el.value;
+
+        function fn(e){
+            val = e.target.value;
+
+            log.innerHTML = `선택된 과일은 ${val} 입니다`;
+        }
+        el.addEventListener("change", fn);
+    </script>
+</body>
+</html>
