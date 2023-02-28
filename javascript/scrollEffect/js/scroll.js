@@ -4,9 +4,20 @@ const gap = 2;
 function scroll(){
     const sections = document.querySelectorAll("section"),
     nav = document.querySelector("nav"),
-    gnbLi = nav.querySelectorAll(".gnb li");
+    gnbLi = nav.querySelectorAll(".gnb li"),
+    sideNav = document.querySelectorAll(".side_nav li");
 
     let scrollTop;
+
+    function removeOn(obj){
+        obj.forEach((o)=>{  
+            o.classList.remove("on");
+        });
+    }
+
+    function smooth(el){
+        document.querySelector(el.firstChild.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+    }
 
     window.addEventListener("scroll", function(){
         scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
@@ -15,18 +26,25 @@ function scroll(){
     
     const animate = (sct)=>{ 
         // section
-        sections.forEach((el)=>{
+        sections.forEach((el, i)=>{
             let sectionTop = el.offsetTop;
 
-            if(sct > sectionTop - 2){
-                el.classList.add("sectionIn");
+            if(sct > sectionTop - gap){
+                gsap.to(el, {backgroundColor: "#f74e4e", ease:"linear"});
+
+                removeOn(gnbLi);
+                gnbLi[i].classList.add("on");
+
+                removeOn(sideNav);
+                sideNav[i].classList.add("on");
             }else{
-                el.classList.remove("sectionIn");
+                gsap.to(el, {backgroundColor: "#f1f380", ease:"linear"});
             }
         });
 
-        // nav
-        (sct >= gap) ? nav.classList.add("sticky") : nav.classList.remove("sticky");
+        // nav의 높이만큼 스크롤을 할 때
+        sct >= nav.clientHeight * 2 ? nav.classList.add("sticky") : nav.classList.remove("sticky");
+        console.log(sct);
     }
     
     // gnb li
@@ -34,13 +52,25 @@ function scroll(){
         el.addEventListener("click", function(e){
             e.preventDefault();
 
-            document.querySelector(el.firstChild.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+            smooth(el);
             
-            gnbLi.forEach((obj)=>{
-                obj.classList.remove("on");
-            })
+            removeOn(el);
+            el.classList.add("on");
+        })
+    })
+
+    // side_nav li
+    sideNav.forEach((el)=>{
+        el.addEventListener("click", function(e){
+            e.preventDefault();
+
+            smooth(el);
+            
+            removeOn(el);
             el.classList.add("on");
         })
     })
 };
 scroll();
+
+

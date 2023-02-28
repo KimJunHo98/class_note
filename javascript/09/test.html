@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .month_text p { display: flex; flex-direction: column; }
+    </style>
+</head>
+<body>
+    <ul class="month_list">
+        <li class="btn_prev month_btn">
+            <a href="#"><i class="xi-angle-left-thin"><span class="ir_so">이전</span></i></a>
+        </li>
+        <li class="month_text">
+            <!-- <p>
+                <em>5</em>
+                <span>2023</span>
+            </p> -->
+        </li>
+        <li class="btn_next month_btn">
+            <a href="#"><i class="xi-angle-right-thin"><span class="ir_so">다음</span></i></a>
+        </li>
+    </ul>
+    <ul class="day_list">
+        <!-- <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li><a href="#">10</a></li>
+        <li><a href="#">11</a></li>
+        <li><a href="#">12</a></li>
+        <li><a href="#">13</a></li>
+        <li><a href="#">14</a></li>
+        <li><a href="#" class="on">15</a></li>
+        <li><a href="#">16</a></li>
+        <li><a href="#">17</a></li>
+        <li><a href="#">18</a></li>
+        <li><a href="#">19</a></li>
+        <li><a href="#">20</a></li>
+        <li><a href="#">21</a></li>
+        <li><a href="#">22</a></li>
+        <li><a href="#">23</a></li>
+        <li><a href="#">24</a></li>
+        <li><a href="#">25</a></li>
+        <li><a href="#">26</a></li>
+        <li><a href="#">27</a></li>
+        <li><a href="#">28</a></li>
+        <li><a href="#">29</a></li>
+        <li><a href="#">30</a></li>
+        <li><a href="#">31</a></li> -->
+    </ul>
+
+    <script>
+        // 날짜 
+        const date = new Date(),
+        year = String(date.getFullYear()),
+        month = String(date.getMonth()+1).padStart(2, "0"),
+        day = String(date.getDate()).padStart(2, "0"),
+        now = year+month+day;
+
+        const monthList = document.querySelector(".month_list"),
+        monthText = monthList.querySelector(".month_text"),
+        dayList = document.querySelector(".day_list"),
+        prevBtn = monthList.querySelector(".btn_prev"),
+        nextBtn = monthList.querySelector(".btn_next");
+
+        const monthEl = document.createElement("p"),
+        dayEl = document.createElement("li");
+
+        monthEl.innerHTML = `<em>${month}</em><span>${year}</sapn>`;
+        dayEl.innerHTML = `<a href="#">${day}</a>`;
+
+        monthText.appendChild(monthEl);
+        dayList.appendChild(dayEl);
+
+        // prev 버튼 클릭함수
+        function clickPrevBtn(){
+
+        }
+
+        // next 버튼 클릭함수
+        function clickNextBtn(){
+
+        }
+
+        prevBtn.addEventListener("click", clickPrevBtn);
+        nextBtn.addEventListener("click", clickNextBtn);
+    </script>
+</body>
+</html>

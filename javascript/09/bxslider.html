@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider</title>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bxslide.css">
+</head>
+<body>
+    <h2>컨트롤 커스텀 슬라이드</h2>
+    <div class="slide_wrap">
+        <div class="bxslider">
+            <div><img src="images/img-1.jpg" title="coffee"></div>
+            <div><img src="images/img-2.jpg" title="coffee"></div>
+            <div><img src="images/img-3.jpg" title="coffee"></div>
+            <div><img src="images/img-4.jpg" title="coffee"></div>
+        </div>
+    </div>
+    <h2>액티브</h2>
+    <div class="slide_wrap">
+        <ul class="active">
+            <li>
+                <img src="images/img-1.jpg" title="coffee">
+                <h2>title</h2>
+            </li>
+            <li>
+                <img src="images/img-2.jpg" title="coffee">
+                <h2>title</h2>
+            </li>
+            <li>
+                <img src="images/img-3.jpg" title="coffee">
+                <h2>title</h2>
+            </li>
+            <li>
+                <img src="images/img-4.jpg" title="coffee">
+                <h2>title</h2>
+            </li>
+        </ul>
+    </div>
+    <h2>동영상 슬라이드</h2>
+    <div class="slide_wrap">
+        <div class="videoSlider">
+            <div>
+                <video src="video/video.mp4" muted autoplay loop></video>
+            </div>
+            <div>
+                <video src="video/video.mp4" muted autoplay loop></video>
+            </div>
+            <div>
+                <video src="video/video.mp4" muted autoplay loop></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+    <script src="js/bxslide.js"></script>
+</body>
+</html>
